@@ -1,0 +1,84 @@
+.productSubscription{
+    padding:0 (@h_space*1.9) !important;
+    table.dataTable{
+        thead th, thead td{
+            border-top: none !important;
+            &:first-child{
+                width: 6% !important;
+            }
+            &:nth-of-type(2){
+                width: 50% !important;
+            }
+            &:nth-of-type(3){
+                width: 22% !important;
+            }
+            &:last-child{
+                width: 18% !important;
+            }
+        }
+        .switch{
+            float: none !important;
+        }
+        tbody{
+            tr:last-child{
+                td{
+                    border-bottom: solid 2px @st-cool-grey-3 !important;
+                }
+            }
+            td{
+                padding: (@v_space*2) (@h_space*1) !important;
+                div{
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    .partNoDesc {
+                        .st-text-size(18, 'Avantgarde Bold');
+                        color: @st-sky-blue;
+                        display: grid;
+                        span {
+                            color: @st-cool-grey-1;
+                            .st-text-size(13, 'Helvetica Roman');
+                            display: inline-block;
+                            margin-top: (@v_space*1);
+                            @media @mobile-break
+                            {
+                                width: inherit;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                        }
+                        @media @mobile-break
+                        {
+                            width:135px;
+                        }
+                    }
+                }
+                &:last-child{
+                    div{
+                        padding-left: (@h_space*4);                    
+                    }
+                }
+                &:first-child{
+                    div{                    
+                        img{
+                            .size(50px,72px);
+                            @media @mobile-break{
+                                .size(35px,50px);
+                            }
+                        }                   
+                    }
+                }
+            }
+        }
+    }  
+    .saveBtn{
+        margin-top: (@v_space*3);
+        text-align: right;
+        button,a{            
+            .size(92px,40px);
+            margin-bottom: 0;
+            padding-top: (@v_space*1);
+        }
+    }      
+}

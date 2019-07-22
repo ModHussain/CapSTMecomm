@@ -1,0 +1,210 @@
+.savecartdetailsection
+{
+    background: @st-white;
+
+    .savecartHeading{
+        padding: 0 (@h_space*1.5) (@v_space*1.9);
+        border-bottom: solid 1px @st-cool-grey-3;
+        .heading{
+            .st-text-size(24, 'Helvetica Bold');
+            color: @st-typing-blue;
+            padding-left:(@h_space*1); 
+        }
+        .downldCart{
+            .st-text-size(14, 'AvantGarde bold');
+            color: @st-sky-blue;
+            i{
+                vertical-align: sub;
+                &.icon-st-addressEdit{
+                    svg {
+                        fill: @st-sky-blue;
+                        .size(21px,23px);
+                    }
+                } 
+            }
+            i:nth-child(2)
+            {
+                padding-left: (@h_space*.5);
+            }
+            a{
+                &:hover {
+                    color: @st-typing-blue ;
+                    .icon-st-addressEdit{
+                        svg {
+                            fill: @st-typing-blue;
+                            .size(21px,23px);
+                        }
+                    }      
+                }
+    
+                &:visited{
+                    color: @st-sky-blue;
+                    &:hover{
+                        color: @st-typing-blue;
+                        .icon-st-pdf,.icon-st-download{
+                            svg {
+                                fill: @st-typing-blue;
+                            }
+                        }
+                    }
+                   
+                        .icon-st-info{
+                            svg {
+                            fill: @st-typing-blue;
+                        }
+                    }
+                      
+                }
+            }
+            
+                @media @mobile-break
+                {
+                    padding-top: (@h_space*1.4);
+                }
+            
+        }
+            }
+
+
+
+
+
+    .savecartstatusblock{
+        .alphaBackground(@st-cool-grey-3,0.2);
+        background: @rgba;
+        min-height: 191px;
+        border-bottom: 1px solid @st-cool-grey-3;
+        .savecartdatasection{
+            padding-top:(@h_space*2);
+            padding-left: (@h_space*4);
+            .savecartblock{
+                .alphaBackground(@st-cool-grey-3,0.5);
+                border-bottom: 1px solid @rgba;
+                padding-bottom: (@h_space*1.5);
+                margin-bottom: (@h_space*1.5);
+                margin-left: -(@h_space*.7);
+                margin-right: (@h_space*1.5);
+            }
+            .rborder{
+                .alphaBackground(@st-cool-grey-3,0.5);
+                border-right:1px solid @rgba; 
+            }
+            .savecartheading{
+                .st-text-size(11, 'Helvetica Roman');
+                color:@st-cool-grey-2;
+            }
+            .savecartdata{
+                .st-text-size(16, 'Helvetica Bold');
+                color:@st-cool-grey-1; 
+                &.description{
+                    .st-text-size(13, 'Helvetica Bold');
+                    color:@st-cool-grey-1;  
+                }
+                
+            }
+            
+            &.commentblock{
+                padding-left: (@h_space*1.2);
+                padding-bottom: (@h_space*2);
+            }
+        }
+        .returncomment{
+            .alphaBackground(@st-cool-grey-3,0.5);
+            border-top: 1px solid @rgba;
+            margin: 0 (@h_space*2);
+        }
+        .savecartpriceblock{
+            .alphaBackground(@st-sky-blue1,0.5);
+            background: @rgba;
+            min-height: 191px;
+            .savecarttotal{
+                .st-text-size(12, 'Helvetica Bold');
+                color:@st-typing-blue; 
+                text-align: center;
+                margin-top: (@v_space*8);
+                
+            }
+            .savecartprice{
+                .st-text-size(20, 'Helvetica Bold');
+                color:@st-typing-blue; 
+                text-align: center;
+                margin-top: (@v_space*1.5);
+                
+            }
+            
+            
+        }
+        .pricesection{
+            .total{
+                 .st-text-size(12, 'Helvetica Bold');
+                 color:@st-cool-grey-1;
+                 text-align: center; 
+                 margin-top: (@h_space*2.5);
+            }
+            .price{
+                .st-text-size(20, 'Helvetica Bold');
+                color:@st-typing-blue;
+                text-align: center;
+                margin-top: (@h_space*1);
+                border-bottom: 1px solid @st-cool-grey-3;
+                padding-bottom: (@h_space*.8);
+                width: 95%; 
+                &.nonborder{
+                    border-bottom: none;
+                }
+           }
+           .reorderbtn
+           {
+               text-align: center;
+               button.reorder,a.reorder{
+                .st-text-size(14, 'Avantgarde Bold');
+                color:@st-white; 
+                background: @st-typing-blue;
+                padding: (@v_space*1) (@h_space*5.5) (@v_space*.6);
+                
+                margin-top: (@h_space*7.5);
+                margin-bottom: (@v_space*1);
+                &.accept
+                {
+                    padding: (@v_space*1) (@h_space*5.4) (@v_space*.6); 
+                    @media @desktop-break
+                    {
+                        margin-right: (@h_space*1.2);
+                        padding: (@v_space*1) (@h_space*3.5) (@v_space*.6);   
+                    }
+                }
+               }
+            .return{
+                .st-text-size(14, 'Avantgarde Bold');
+                color: @st-sky-blue;
+                &:hover{
+                    color:@st-typing-blue;
+                }
+               
+            }
+            .returnexpiry{
+                .st-text-size(12, 'Helvetica Roman');
+                color: @st-cool-grey-2 ;
+                width: 190px;
+                padding-left: (@h_space*3.5);
+                i{
+                    svg{
+                        .alphaBackground(@st-cool-grey-1,0.9);
+                        fill:@rgba;
+                       .size(14px);
+                        
+                    }
+                }
+                @media @middesktop-break{
+                    padding-left: 0;
+                }
+            }
+            &.cancelreturnblock
+            {
+                margin-top:(@h_space*3.5); 
+            }
+           }
+        }
+    }
+
+}

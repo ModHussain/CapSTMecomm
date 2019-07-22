@@ -1,0 +1,66 @@
+<div class="row">
+
+    <div class="col-sm-1 sidespace">
+        <img src="../images/deal-of-the-week-0319.png" class="img-fluid img-postion">
+    </div>
+    <div class="col-sm-7 top_postion">
+        <strong class="strong_heanding">SAVE</strong><span class="normal_heading font"> upto </span><strong class="strong_heanding"><sup>US$</sup>50 </strong><span class="normal_heading">per unit</span>
+        <span class="normal_heading font_size">. Labor Day Extended Deal on Infotainment Processors <strong class="strong_heanding font_size">STA1295.</strong></span>
+    </div>
+    <div class="col-sm-2 buynowspace"><button type="button" class="btn btn-outline-info buynow">BUY NOW</button></div>
+    <div class="col-md-2 top_mid">
+        <div class="row">
+
+            <div class="col-1 col-md-2 border">
+                <span id="hours" class="timer font_color hrs">00</span>
+            </div>
+            <div class="col-2 col-md-1 hrs">
+                <span class="d-inline d-sm-none timer">hrs</span><b class="timespace">:</b>
+            </div>
+
+            <div class="col-1 col-md-2 border hrsspace">
+                <span id="minutes" class="timer font_color mins">00</span>
+            </div>
+            <div class="col-2 col-md-1 mins">
+                <span class="d-inline d-sm-none timer">mins</span><b class="timespace">:</b>
+            </div>
+
+            <div class="col-1 col-md-2 border minsspace ">
+                <span id="seconds" class="timer font_color sec">00</span>
+            </div>
+            <div class="col-2 col-md-1 sec">
+                <span class="d-inline d-sm-none timer">secs</span>
+            </div>
+        </div>
+        <div class="row ">
+            <div class=" col-2 col-md-3 d-none d-sm-block d-md-block"><span class="timer_position hrs">hrs</span></div>
+
+            <div class="col-2 col-md-4 d-none d-sm-block d-md-block"><span class="timer_position mins">mins</span></div>
+
+            <div class="col-2 col-md-4 d-none d-sm-block d-md-block"><span class="timer_position sec">secs</span></div>
+        </div>
+    </div>
+
+
+</div> 
+<script>
+//Deal of the day
+        //count down timer start//
+        var end = new Date(new Date().getTime()+(5*24*60*60*1000));
+        var _second = 1000;
+        var _minute = _second * 60;
+        var _hour = _minute * 60;
+
+        function clock() {
+
+            var now = new Date();
+            var distance = end - now;
+            var hours = Math.floor(distance / _hour);
+            var minutes = Math.floor((distance % _hour) / _minute);
+            var seconds = Math.floor((distance % _minute) / _second);
+            document.getElementById('hours').innerText = hours.toString().length == "1" ? "0" + hours : hours,
+                document.getElementById('minutes').innerText = minutes.toString().length == "1" ? "0" + minutes : minutes,
+                document.getElementById('seconds').innerText = seconds.toString().length == "1" ? "0" + seconds : seconds;
+        }
+        setInterval(clock, 1000);
+</script>

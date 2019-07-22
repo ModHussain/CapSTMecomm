@@ -1,0 +1,184 @@
+.notificationBlock {
+    margin: 0 (@h_space*2) (@v_space*4);
+
+    .notification {
+        border-radius: 5px;
+
+        i {
+            display: none;
+        }
+
+        .content {
+            display: inline-block;
+            float: left;
+            color: @st-cool-grey-1;
+            .st-text-size(16, 'Helvetica Roman');
+            margin: (@v_space*.4) 0 0 (@h_space*1.2);
+
+            strong {
+                .st-text-size(16, 'Helvetica bold');
+            }
+        }
+
+        &.getBoxShadow {
+            .alphaBackground(@st-black, .14);
+            -moz-box-shadow: 0px 2px 2px 2px @rgba;
+            -webkit-box-shadow: 0px 2px 2px 2px@rgba;
+            -o-box-shadow: 0px 2px 2px 2px @rgba;
+            box-shadow: 0px 2px 2px 2px @rgba;
+
+        }
+
+        &.success {
+            padding: (@v_space*1);
+            .alphaBackground(@st-light-green, .2);
+            border-width: 1px 1px 1px 5px;
+            border-style: solid;
+            border-color: @st-light-green;
+            background: @rgba;
+
+            .icon-st-success {
+                display: inline-block;
+                float: left;
+            }
+        }
+
+        &.critical {
+            padding: (@v_space*1);
+            .alphaBackground(@st-pinkish-red, .1);
+            border-width: 1px 1px 1px 5px;
+            border-style: solid;
+            border-color: @st-maroon;
+            background: @rgba;
+
+            .icon-st-warningError {
+                display: inline-block;
+                float: left;
+
+                svg {
+                    fill: @st-maroon;
+                }
+            }
+
+            .content {
+                color: @st-maroon;
+            }
+        }
+
+        &.warning {
+            padding: (@v_space*1);
+            .alphaBackground(@st-yellow, .5);
+            border-width: 1px 1px 1px 5px;
+            border-style: solid;
+            border-color: @st-yellow;
+            background: @rgba;
+
+            .icon-st-warningError {
+                display: inline-block;
+                float: left;
+
+                svg {
+                    fill: @st-cool-grey-1;
+                }
+            }
+
+            .content {
+                color: @st-cool-grey-1;
+            }
+        }
+        
+        &.disabledAccount {
+            padding: (@v_space*1); 
+            border-width: 1px 1px 1px 5px;
+            border-style: solid;
+            .alphaBackground(@st-white, .5);
+            border-color: @rgba;
+            background: @st-maroon;
+            box-shadow: none;
+            .icon-st-warningError {
+                display: inline-block;
+                float: left;
+
+                svg {
+                    fill: @st-white;
+                }
+            }
+
+            .content {
+                color: @st-white;
+            }
+        }
+    }
+}
+
+
+.notificationList {
+    .notification-holder {
+        height: 30px;
+
+        .placeholder {
+            margin-top: (@v_space*1);
+            display: none;
+            i {
+                display: none;
+
+                &.icon-st-warningError svg {
+                    .size(14px, 13px);
+                }
+
+                &.icon-st-pramotion svg {
+                    .size(20px, 15px);
+                }
+            }
+
+            .content {
+                display: inline-block;
+                float: left;
+                color: @st-cool-grey-2;
+                .st-text-size(11, 'Helvetica bold');
+                margin: (@v_space*.2) 0 0 (@v_space*.2);
+
+                strong {
+                    .st-text-size(16, 'Helvetica bold');
+                }
+            }
+        }
+    }
+
+    .critical {
+        border: 2px solid @st-maroon;
+        .placeholder{display: block;}
+        .icon-st-warningError {
+            display: inline-block !important;
+            float: left;
+
+            svg {
+                fill: @st-maroon;
+            }
+        }
+    }
+
+    .pramotion {
+        .placeholder{display: block;}
+        .icon-st-pramotion {
+            display: inline-block !important;
+            float: left;
+            svg {
+                fill: @st-light-green;
+            }
+        }
+    }
+
+    .warning {
+        border: 2px solid @st-yellow;
+        .placeholder{display: block;}
+        .icon-st-warningError {
+            display: inline-block !important;
+            float: left;
+
+            svg {
+                fill: @st-yellow;
+            }
+        }
+    }
+}

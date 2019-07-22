@@ -1,0 +1,66 @@
+.confirmordersection
+{
+    .Thankyousection
+    {
+        padding-top: (@v_space*2);
+        .thankyou{
+        .st-text-size(48, 'Helvetica Roman');
+        color: @st-typing-blue;
+        &.page{
+            .st-text-size(160, 'Helvetica Bold');
+            margin-top: (@v_space*6);
+            margin-bottom: -(@h_space*1);
+        }
+        &.sorry{
+            .st-text-size(48, 'Helvetica Roman');
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        &.content{
+            .st-text-size(18, 'Helvetica Roman');
+            color: @st-cool-grey-1;
+            margin-top: (@h_space*1.3);
+            margin-bottom: (@h_space*13);
+        }
+        }
+    }
+    .shippingAddSel
+        {    
+        .orderheading{
+            .alphaBackground(@st-sky-blue1, .4);
+            background: @rgba;
+            .st-text-size(20, 'Helvetica bold');
+            color: @st-typing-blue;
+            text-align: center;
+            border-bottom: solid 1px lighten(@st-cool-grey-3, 10%);
+            padding: (@v_space*1.5) (@h_space*1.5) (@v_space*1);
+        }
+        .orderdata
+        {
+            .st-text-size(13, 'Helvetica bold');
+            color: @st-cool-grey-1;
+            text-align: center;
+            
+        }
+        .orderactionsection{
+            
+            .st-text-size(13, 'Helvetica bold');
+            color: @st-white;
+            text-align: center;
+            .viewbtn
+            {
+                background: @st-typing-blue;
+                .st-text-size(14, 'Avantgarde bold');
+                padding: (@v_space*1.5) (@h_space*1.5) (@v_space*1);
+                text-transform: capitalize;
+            }
+            .continuebtn{
+                background: @st-sky-blue;
+                .st-text-size(14, 'Avantgarde bold');
+                padding: (@v_space*1.5) (@h_space*1.5) (@v_space*1);
+                text-transform: capitalize;
+            }
+        }
+        }
+}
+    

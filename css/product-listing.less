@@ -1,0 +1,109 @@
+.product-listing{
+    margin:(@v_space*2.5) 0;
+    h1{
+        .st-text-size(28, 'ITC Lubalin bold');
+        text-transform: uppercase;
+        margin:0 (@h_space*1.5);
+        span{
+            .st-text-size(28, 'ITC Lubalin Light');  
+        }
+    }
+    .productListing-holder{
+        margin:(@v_space*2.5) 0;
+        .sideBar{
+            .product-family{
+                background:@st-cool-grey-4;
+                min-height: 620px;
+                .heading{
+                    .st-text-size(20, 'ITC Lubalin bold');
+                    color:@st-black;
+                    padding:(@v_space*1.5);
+                }
+                .familySearch{
+                    position: relative;
+                    border-bottom: solid 1px @st-dark-grey;
+                    padding:0 (@h_space*1.5);
+                    input{
+                        width:100%;
+                        height: 44px;
+                        border-radius: 5px;
+                        background: none;
+                    }
+                    .searchIcon{
+                        position: absolute;
+                        z-index: 1;
+                        right: 20px; 
+                        top: (@v_space*1);
+                        background-image: url(@{image-path}/search.png);
+                        width:22px;
+                        height:22px;
+                        cursor: pointer;
+                    }
+                }
+                .allProcuctCat{
+                    .st-text-size(16, 'ITC Lubalin Bold');
+                    padding:(@v_space*2.5) (@h_space*1.5);
+                }
+                ul.productCat{
+                    margin:0;
+                    padding:0;
+                    li.cat-item{
+                        list-style: none;
+                        padding:(@v_space*1.5);   
+                        cursor: pointer;                                               
+                        .st-text-size(16, 'ITC Lubalin Bold');
+                        i{
+                            float: right;
+                        }
+                                               
+                    }
+                    ul.subCat{
+                        margin:0 0 0 (@h_space*3); 
+                        padding:0;
+                        display: none;
+                        li.subCat-item{
+                            list-style: none;
+                            background: url(@{image-path}/plArrow.png) left center no-repeat;
+                            padding: (@v_space*1) (@v_space*2.5);
+                            cursor: pointer;
+                        }
+                        
+                    }
+                    .cat-itemSel{
+                        background: @st-sky-blue1;
+                        border-left: solid 5px @st-cool-grey-1;
+                    }
+                }
+            }
+
+            .product-filter{
+                background: @st-white;
+                margin: 0;
+                border: solid 1px @st-cool-grey-4;
+                .heading{
+                    padding: (@v_space*2.5);
+                    border-bottom: solid 1px @st-cool-grey-4;
+                    .st-text-size(20, 'ITC Lubalin Bold');
+                    a{
+                        float:right;
+                        .st-text-size(14, 'ITC Lubalin Bold');
+                    }
+                }
+                ul.filterCat{
+                    margin:0;
+                    padding:0;
+                    li.filterItem{
+                        .st-text-size(14, 'AvantGarde');
+                        list-style: none;
+                        background: url(@{icon-path}/icon-plus.svg) 20px center no-repeat;
+                        padding: (@v_space*2) (@h_space*6);
+                        cursor: pointer;
+                        border-bottom: solid 1px @st-cool-grey-4;
+                    }
+                }
+            }
+        }
+
+    }
+    
+}

@@ -1,0 +1,276 @@
+.homecontainerwrapper
+{
+    background-color: @st-typing-blue;
+    height:265px;
+    @media @mobile-break{
+        background-color: @st-white;
+    }
+}
+.dealscontainer
+{
+    margin-top:-(@v_space*26.5);
+}
+ //deal of the day banner less start//
+ #dealBanner{
+    background-color: @st-white;  
+    //margin: 0px -(@h_space*1.5);
+    height: 60px;
+
+    @media @mobile-break{
+        height: auto;
+        margin: 0px;
+        margin-bottom: (@v_space*2);
+        margin-left: (@h_space*.3);
+        margin-top: (@v_space*1.5);
+             
+    }
+    .border
+    {
+        width: 34px;
+        height: 32px;
+        border-radius: 3px;
+        border: solid 2px @st-sky-blue1; 
+        &.hrsspace
+        {
+            @media @mobile-break{
+                margin-left: (@h_space*.1);
+            }
+        }
+        &.minsspace
+        {
+            @media @mobile-break{
+                margin-left: (@h_space*1);
+            }
+        }
+    }
+    .sidespace
+    {
+        margin-left: 8%;
+        @media @desktop-break{
+            margin-left: 4%;
+        }
+    }
+    .col-2.col-md-1
+    {
+       @media @mobile-break
+        {
+            &.hrs{
+                @media @mobile-break{
+                    padding: 3px 10px;
+                    }
+            }
+            &.mins{
+                @media @mobile-break{
+                    padding: 3px 10px;
+                    }
+            }
+            &.sec{
+                @media @mobile-break{
+                    padding: 3px 10px;
+                    }
+            }
+        }
+       
+    }
+    .timespace
+    {
+        .st-text-size(22, 'AvantGarde Bold');
+        margin: (@v_space*.3) 0 0 -(@h_space*.4);
+        display: inline-block;
+        @media @mobile-break
+        {
+            padding: 0 (@h_space*.5);
+            margin-left: 0px;
+            display:inline;
+        }
+    }
+    .buynow
+    {
+        margin-top: (@v_space * .9);
+        margin-bottom: -(@v_space * 1.2);
+        color:@st-sky-blue;
+        padding: (@v_space * 1.2) (@h_space * 1.5) (@v_space * .8);
+        .st-text-size(16, 'AvantGarde Bold');
+        background-color: @st-white;
+        border: 1px solid @st-sky-blue;
+        @media @mobile-break{
+            margin-left: 70%;
+            display:none;
+        }
+    }
+    .top_postion
+    {
+        margin-top:(@v_space * 1.9);
+        margin-left: -(@h_space*4.4);
+        margin-right: (@h_space*1.2);
+        @media @desktop-break
+        {
+            margin-top:(@v_space * 1);
+            margin-left: -(@h_space*3.6);
+            margin-right: -(@h_space*.2);
+        }
+        @media @mobile-break{
+            margin-top: 3%;
+            margin-left: (@h_space*6.3);
+            margin-right: (@h_space*.6);
+            line-height: 17px;
+        }
+        
+    }
+    .top_mid
+    {
+        margin-top: (@v_space * 0.6);
+        margin-left: (@h_space * 2.5);
+        @media @middesktop-break
+        {
+            margin-left: -(@h_space * 2.8); 
+        }
+
+        @media @desktop-break
+        {
+        margin-top: (@h_space*.6);
+        margin-left: -2%;
+        }
+        @media @mobile-break{
+            margin-top: (@v_space*1);
+            margin-left: (@h_space*7.3);         
+        }
+    }
+    .img-postion
+    {
+    width: 30px;
+    height: 46px;
+    position: absolute;
+    right: 40%;
+    top: 8px;
+    @media @mobile-break{
+        right: 88%;
+        top: 5px;
+    }
+    }
+    .buynowspace
+    {
+        margin-left: -13%;
+        @media @middesktop-break{
+            margin-left: -5%;
+        }
+        @media @desktop-break{
+            margin-left: -1%;
+        }
+    }
+    .strong_heanding
+    {
+        .st-text-size(18, 'AvantGarde Bold');
+        color: @st-sky-blue;
+        margin-top: 50%;
+        &.font_size
+        {
+            .st-text-size(12, 'AvantGarde Bold');
+            color: @st-dark-blue; 
+        }
+
+    }
+    .normal_heading
+    {
+        .st-text-size(18, 'AvantGarde');
+        color: @st-black;
+        &.font_size
+        {
+            .st-text-size(12, 'AvantGarde'); 
+        }
+        &.font{
+            .st-text-size(18, 'AvantGarde');
+        }
+    }   
+    .timer
+    {
+        .st-text-size(14, 'AvantGarde');
+        margin-left: -(@h_space*.6);
+
+        &.font_color
+        {
+            color: @st-black;
+            .st-text-size(13, 'AvantGarde Bold');
+            margin-top: (@v_space*.8);
+    		display: inline-block;
+            &.hrs{
+                margin-left: -(@h_space*1.1);
+                @media @desktop-break{
+                    margin-left: -(@h_space*1.4);
+                }
+                @media @mobile-break{
+                    margin-left: -(@h_space*1.4);
+                }
+            }
+            &.mins{
+                @media @mobile-break{
+                    margin-left: -(@h_space*.9);
+                }
+            }
+            &.sec{
+                @media @mobile-break{
+                    margin-left: -(@h_space*.8);
+                }
+            }
+            
+        }
+       
+    }
+    .timer_position
+    {
+        .st-text-size(14, 'AvantGarde');
+        margin-left: -(@h_space*.6);
+
+        &.font_color
+        {
+            color: @st-black;
+            .st-text-size(14, 'AvantGarde Bold');
+            
+        }
+        &.hrs
+        {
+            @media @desktop-break{
+                margin-left: -(@h_space*.7);
+            } 
+            @media @mobile-break{
+                .st-text-size(14, 'AvantGarde');
+                position: absolute;
+                bottom: 8px;
+                left: 43px;
+            } 
+        }
+        &.mins
+        {
+            @media @desktop-break{
+                margin-left: (@h_space*.8);
+            } 
+            @media @mobile-break{
+                .st-text-size(14, 'AvantGarde');
+                position: absolute;
+                bottom: 9px;
+                left: 65px;
+            }
+        }
+        &.sec{
+            @media @desktop-break{
+                margin-left: (@h_space*1.8);
+            } 
+            @media @mobile-break{
+                .st-text-size(14, 'AvantGarde');
+                margin-left: -(@h_space*.6);
+                position: absolute;
+                left: 97px;
+                bottom: 9px;
+                
+            }
+        }
+        @media @mobile-break{
+            .st-text-size(14, 'AvantGarde');
+            margin-left: -(@h_space*.6);
+        }
+    }
+}
+
+
+
+//deal of the day banner less end//

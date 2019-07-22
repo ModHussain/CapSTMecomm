@@ -1,0 +1,485 @@
+.icon[role="presentation"] {
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    min-width: 20px;
+    min-height: 20px;
+    
+        &.icon-st-global{
+            svg{
+                fill:@st-dark-grey;
+                width: 26px;
+                height: 18px;
+                margin-top: (@v_space*.2);
+            }
+          
+        }
+        /*carousel arrow  start*/
+        &.icon-st-rightarrow{
+            svg{
+                fill:@st-cool-grey-2;
+                .size(22px,36px);
+            }
+          
+        }
+        &.icon-st-leftarrow{
+            svg{
+                fill:@st-cool-grey-2;
+                .size(22px,36px);
+                transform: rotate(180deg);
+            }
+          
+        }
+        
+        /*carousel arrow  end*/
+
+
+        /* Selector page filter SVG Start  */
+        &.icon-st-productFilterIcon {
+            svg{
+                fill:@st-sky-blue;
+                .size(24px,16px);
+                
+            }
+        }
+    /* Selector page filter SVG End  */
+
+        &.icon-st-downarrow-white{
+            background: url(@{icon-path}/arrow-white.png) no-repeat bottom left;
+            padding-left: (@h_space*2);
+            display: inline-block;
+        }
+        
+        /*--nav menu icon start--*/
+        &.icon-st-brand{
+            svg{               
+                .size(79px,56px);
+                min-width: 79px;
+                min-height: 56px;
+            }
+          
+        }
+        &.icon-st-menu{
+            svg{
+                fill:@st-white;
+                .size(14px); 
+            }
+           
+        }
+        &.icon-st-addrinfo{
+            svg{
+                fill:@st-maroon;
+                .size(18px); 
+            }
+           
+        }
+        &.icon-st-pdf{
+            svg{
+                fill:@st-sky-blue;
+                .size(24px); 
+            }
+           
+        }
+        &.icon-st-home{
+            svg{
+                fill:@st-white;
+                .size(18px); 
+            }
+           
+        }
+        &.icon-st-bulb{
+            svg{
+                fill:@st-white;
+                .size(20px,22px);
+               
+            }
+            
+        }
+        &.icon-st-service{
+            svg{
+                fill:@st-white;
+                .size(23px,22px);
+                margin-left: -(@h_space*.7);
+                @media @mobile-break
+                {
+                    margin-left: -(@h_space*.2);
+                }
+            }
+          
+        }
+        &.icon-st-delivery{
+            svg{
+                fill:@st-sky-blue;
+                .size(26px);
+                margin-left: -(@h_space * 1.5);
+                @media @mobile-break
+                {
+                    margin-left: -(@h_space*.7);
+                }
+            }
+          
+        }
+        &.icon-st-order{
+            svg{
+                fill:@st-typing-blue;
+                .size(17px,13px);
+            }
+          
+        }
+        &.icon-st-previous{
+            svg{
+                fill:@st-typing-blue;
+                .size(17px,19px);
+            }
+          
+        }
+        &.icon-st-invoice{
+            svg{
+                fill:@st-typing-blue;
+                .size(15px);
+            }
+          
+        }
+        &.icon-delete{
+            svg{
+                fill:@st-cool-grey-1;
+                .size(28px);
+            }
+          
+        }
+        &.icon-close-menu{
+            svg{
+                fill:@st-white;
+                .size(23px);
+            }
+          
+        }
+        &.icon-st-quote{
+            svg{
+                fill:@st-typing-blue;
+                .size(12px,20px);
+            }
+          
+        }
+        &.icon-st-address{
+            svg{
+                fill:@st-typing-blue;
+                .size(16px,16px);
+            }
+          
+        }
+        &.icon-st-card{
+            svg{
+                fill:@st-typing-blue;
+                .size(21px,21px);
+            }
+          
+        }
+        &.icon-st-wish{
+            svg{
+                fill:@st-typing-blue;
+                .size(15px);
+            }
+          
+        }
+        &.icon-st-download{
+            svg{
+                fill:@st-sky-blue;
+                .size(16px,18px);
+            }
+          
+        }
+        &.icon-st-newCart{
+            svg{
+                fill:@st-sky-blue;
+                .size(18px);
+            }
+        }
+        &.icon-st-logout{
+            svg{
+                fill:@st-typing-blue;
+                .size(14px);
+            }
+          
+        }
+        &.icon-st-cart
+        {
+            svg{
+                fill:@st-white;
+                .size(38px,36px);
+                &:hover
+                {
+                    fill:@st-sky-blue; 
+                }
+                @media @mobile-break{
+                    fill:@st-white;
+                    .size(25px,23px);
+                    }
+            }
+
+        }
+        
+        &.icon-st-handbar{
+            svg{
+                display: none;
+                @media @mobile-break{
+                    display: inline;
+                    fill:@st-white;
+                    .size(24px,20px);
+                    }
+            }
+          
+        }
+        &.icon-st-solution{
+            svg{
+                fill:@st-white;
+                .size(19px,25px);
+            }
+          
+        }
+        &.icon-st-profile{
+            svg{
+                fill:@st-white;
+                margin-top: (@v_space*.5);
+                .size(19px);
+            
+                @media @mobile-break{
+                    fill:@st-white;
+                    .size(17px,16px);
+                    margin-top: 0;
+                    }
+            }
+          
+        }
+        &.icon-st-profile2{
+            svg{
+                fill:@st-typing-blue;
+               
+                .size(13px,14px);
+                @media @mobile-break{
+                    fill:@st-white;
+                    .size(25px,23px);
+                    }
+            }
+            
+          
+        }
+        /* shippingmethod icons start*/
+
+        &.icon-st-shippingtruck{
+            svg{
+                fill:@st-black;
+                width: 70px;
+                height: 40px;
+            }
+        }
+        
+        &.icon-st-shippingexpress{
+            svg{
+                fill:@st-black;
+                width: 60px;
+                height: 40px;
+            }
+        }
+        /*shippingmethod icons end*/
+        /*--nav menu icon end--*/
+        &.icon-st-rightarroworange{
+            background: url(@{icon-path}/right-arrow-copy-3.png) no-repeat center center;
+            display: inline-block;
+            min-width: 25px;
+            min-height: 22px;
+            position: absolute;
+            top: 1px;
+        }
+        &.icon-st-viewarrow{
+            svg{
+            fill:@st-sky-blue;
+            .size(20px,15px);
+            }
+        }
+        &.icon-st-collapseExpand{
+            svg{
+                fill:@st-white;
+                .size(35px);
+            }
+        }
+        &.icon-st-downarrow{
+            svg{
+                fill:@st-dark-grey;
+                .size(10px);
+                transform: rotate(90deg);
+                margin-top: (@v_space*.2);
+            }
+        }
+        &.icon-st-rightarrow{
+            svg{
+                fill:@st-dark-grey;
+                .size(10px);
+                margin-top: (@v_space*.2);
+            }
+        }
+        &.icon-st-favorites {
+            svg{
+                fill:@st-dark-blue;
+                .size(27px,23px);
+                margin-top: (@h_space*.6);
+            }
+        }
+
+        &.icon-st-recommended{
+            background: url(@{icon-path}/recommended.png) no-repeat bottom left;
+            display: inline-block;
+            width: 43px;
+            height: 42px;
+            margin: 0 (@h_space*2) -(@v_space*1.2) 0;
+        }
+        &.icon-st-promotion{
+            svg{
+                fill:@st-cool-grey-2;
+                .size(32px);
+            }
+        }
+
+        &.icon-st-markfav{
+            background: url(@{icon-path}/markfav.png) no-repeat bottom left;
+            display: inline-block;
+            width:24px;
+            height:28px;
+        }
+        &.icon-st-markfavSel{
+            background: url(@{icon-path}/markfavSel.png) no-repeat bottom left;
+            display: inline-block;
+            width:24px;
+            height:28px;
+        }
+        &.icon-st-search
+        {
+            svg{
+                fill:@st-typing-blue;
+                .size(20px);
+            }
+
+        }
+
+        &.icon-st-coin{
+            svg{
+                fill:@st-dark-grey;
+                .size(37px,13px);
+                margin-top: (@v_space*.2);
+            }
+        }
+
+        &.icon-st-help{
+            svg{
+                fill:@st-dark-grey;
+                .size(18px);
+                margin-top: (@v_space*.2);
+            }
+        }
+        &.icon-st-phone{
+            svg{
+                fill:@st-dark-grey;
+                width: 14px;
+                height: 14px;
+                margin-top: (@v_space*.2);
+                @media @mobile-break
+                {
+                    .size(20px);
+                }
+            }
+        }
+                 
+        //Icons for PLP page
+        &.icon-st-accordionPlus{
+            background: url(@{icon-path}/icon-plus.svg) no-repeat center center;
+            .size(18px);
+        }
+        &.icon-st-accordionMinus{
+            background: url(@{icon-path}/icon-minus.svg) no-repeat center center;
+            .size(18px);
+        }
+
+        /*Icons for cart page */
+        &.icon-st-valueAdd{
+            svg{
+                fill:@st-sky-blue;
+                .size(15px);
+            }
+        }
+        &.icon-st-valueSubstract{
+            svg{
+                fill:@st-cool-grey-3;
+                .size(15px);
+            }
+            &.enableCalc{
+                svg{
+                     fill:@st-sky-blue;
+                }
+            }
+        }
+
+        &.icon-st-cloud-upload-arrow{
+            svg{
+                fill:@st-sky-blue;
+                .size(25px,22px);
+            }
+        }
+
+        &.icon-st-recycle{
+            svg{
+                fill:@st-sky-blue;
+                .size(22px,22px);
+            }
+        }
+        &.icon-st-info{
+            svg{
+                fill:@st-typing-blue;
+                .size(15px);
+            }
+        }
+    
+        &.icon-st-success{
+            svg{
+                fill:@st-cool-grey-1;
+                .size(21px);
+            }
+        }
+    
+        &.icon-st-warningError{
+            svg{
+                fill:@st-cool-grey-1;
+                .size(23px, 19px);
+            }
+        }
+        &.icon-st-pramotion{
+            svg{
+                fill:@st-cool-grey-1;
+                .size(20px, 15px);
+            }
+        }
+        &.icon-st-addressEdit{
+            svg{
+                fill:@st-sky-blue;
+                .size(21px, 19px);
+            }
+        }
+    
+        &.icon-st-tick{
+            svg{
+                fill:@st-sky-blue;
+                .size(17px, 13px);
+            }
+        }
+        /*myorder icons start */
+        &.icon-st-box{
+            svg{
+                fill:@st-white;
+                .size(30px);
+            }
+          
+        }
+        /* myorder icons end */
+}

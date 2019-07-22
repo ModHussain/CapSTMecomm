@@ -1,0 +1,209 @@
+.savedaddressblock{
+    background: @st-white;
+    padding: 0 (@h_space*2);
+    .alphaBackground(@st-cool-grey-3,.5);
+    border-top: 1px solid @rgba;
+    .savedheading{
+        .st-text-size(18, 'Helvetica Bold');
+        color: @st-typing-blue;
+        padding-top:(@v_space*3);
+        padding-bottom: (@v_space*.5);
+    }
+    .shipsaveaddress{
+        width: 392px;
+        margin-left: (@h_space*1.6);
+        &.marl2{
+        margin-left: (@h_space*4.8);
+        @media @mobile-break {
+            margin-left: 0;
+        }
+        @media @desktop-break {
+            margin-left: (@h_space*1.7);
+        }
+        }
+        @media @middesktop-break
+        {
+            width: 318px;
+        }
+        @media @desktop-break
+        {
+            width: 290px;
+        }
+    }
+    .saveaddblock {
+        .alphaBackground(@st-cool-grey-3, .5);
+        border: solid 1px @rgba;
+        border-radius: 5px;
+        margin:(@v_space*2) 0;
+        .saveadddressdata{
+            .location{
+                .size(24px);
+            }
+            .addr{
+                margin-left: -(@h_space*2);
+                &.addressmodal{
+                    margin-left: -(@h_space*7.5);
+                    @media @mobile-break{
+                        margin-left: auto;
+                    }
+                }
+            }
+            .alphaBackground(@st-sky-blue1, .2);
+            background: @rgba;
+            .st-text-size(13,'Helvetica bold');
+            color: @st-typing-blue;
+            border-bottom: solid 1px lighten(@st-cool-grey-3, 10%);
+            padding: (@v_space*2.3);
+            .paymentcard
+            {
+            .st-text-size(16, 'Helvetica Bold');
+            color: @st-cool-grey-1;
+            margin-top: (@v_space*.5);
+            margin-bottom: (@v_space*1.7);
+            &.paymentreview1
+            {
+            .st-text-size(16, 'Helvetica Bold');
+            color: @st-cool-grey-1;
+            margin-left: (@v_space*1.0);
+            }
+            }
+            
+        }
+        .addressmanageblock{
+            padding: (@v_space*2) (@h_space*2.5);
+            .default{
+            .st-text-size(12,'Helvetica Roman');
+            color: @st-cool-grey-2;
+           
+            }
+            .sdefault{
+                .st-text-size(12, 'Avantgarde Bold');
+                color: @st-sky-blue;
+                &:hover{
+                    color: @st-typing-blue;
+                }
+            }
+            .icon-st-recycle{
+                svg{
+                    .size(23px);
+                    &:hover{
+                        fill:@st-typing-blue;
+                    }
+                }
+                
+            }
+            .icon-st-addressEdit{
+                svg{
+                    .size(26px,22px);
+                }
+            }
+            .editbtn
+            {
+                margin-right: (@h_space*1)
+            }
+        }
+    }
+}
+.newaddressblock,.paymentmodeblock{
+    padding: 0 (@h_space*2);
+    
+    
+    // .addtriangle::after{
+    //     content: "";
+    //     position: absolute;
+    //     width: 0;
+    //     height: 0;
+    //     bottom: 53px;
+    //     left: -168px;
+    //     border: 10px solid @st-cool-grey-3;
+    //     border-color: @st-white;
+    //     transform: rotate(45deg);
+    //     box-shadow: -5px 4px 0px 0 #e9eaeb;
+        
+    // }
+    .buttonsection{
+        .st-text-size(14, 'Avantgarde Bold');
+        padding: (@v_space*1) 0 (@v_space*3); 
+        border-bottom: solid 1px lighten(@st-cool-grey-3, 10%);
+        text-align: right;  
+        .save{
+            color:@st-white;
+            background: @st-sky-blue;
+            padding: (@v_space*.8) (@h_space*3.5); 
+            margin-left: (@h_space*2.5);
+        }
+        &.pcard{
+           border-bottom: none; 
+           border-top: solid 1px lighten(@st-cool-grey-3, 10%);
+           margin-right: (@h_space*2.5);
+           padding-top: (@v_space*2);
+        }
+    }
+    
+}
+.paymentcardbanner{
+    margin-right: (@h_space*2);
+}
+
+.addressviewblock{
+    .alphaBackground(@st-cool-grey-3,.5);
+    border: 5px solid @rgba;
+    border-radius: 5px;
+    margin-top: (@h_space*11.5);
+    margin-left: (@h_space*1);
+    width: 403px;
+    .addressviewer{
+        text-align: center;
+        padding: (@v_space*1) (@v_space*2);
+        border-bottom: 1px solid @st-cool-grey-3;
+        
+        .addressheading{
+            .st-text-size(18,'Helvetica Bold');
+            color: @st-maroon;
+            margin-top: (@h_space*1);
+            padding: 0 (@h_space*3) 0 0;
+            .icon-delete{
+            svg{
+                .size(21px);
+                position: relative;
+                top:-27px;
+                left: 35px;
+            }
+        }
+        }
+        .addressinfo{
+            .st-text-size(14,'Helvetica Roman');
+            color: @st-cool-grey-1;
+            margin-top: (@v_space*2);
+        }
+        .addressconform{
+            margin-top: (@v_space*3.3);
+            margin-bottom: -(@v_space*2.6);
+            .st-text-size(14,'Avantgarde Bold');
+            .no{
+                padding-right:(@h_space*8);
+            }
+            a.save{
+                background: @st-sky-blue;
+                color:@st-white;
+                padding: (@v_space*1) (@h_space*1.5);
+                border-radius: 5px;
+            }
+             
+        }
+    }
+    .addressnote{
+        padding: (@v_space*1.5) 0 (@v_space*1.5) (@h_space*2.5);
+        .st-text-size(12,'Helvetica Roman');
+        color: @st-cool-grey-2;
+        .pleasenote{
+            .st-text-size(12,'Helvetica Bold');
+            color: @st-maroon;
+        }
+    }
+}
+.addtriangle{
+    position: relative;
+    bottom: 35px;
+    left: -206px;
+}

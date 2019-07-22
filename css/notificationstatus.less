@@ -1,0 +1,67 @@
+.notificationstatus{
+    i{
+        .size(40px);
+        display: block;
+        &.small{
+            .size(20px);
+        }
+    }
+    
+    &.shipped{
+        i{
+            background: @st-white url(/images/box@2x.png);
+            background-position: center;
+            border-radius: 50%;
+        }   
+    }
+    &.delivered,&.refunded,&.approved{
+        i{
+            background: @st-white url(/images/checked-1-copy-4@2x.png);
+            background-position: center;
+            border-radius: 50%;
+        }
+    }
+    &.processing{
+        i{
+            background: @st-white url(/images/rounded-rectangle-618-copy-3@2x.png);
+            background-position: center;
+            border-radius: 50%;
+        }
+    }
+    &.returned{
+        i{
+            background: @st-white url(/images/back-arrow@2x.png);
+            background-position: center;
+            border-radius: 50%;
+        }
+    }
+    &.canceled,&.rejected{
+        i{
+            background: @st-white url(/images/error@2x.png);
+            background-position: center;
+            border-radius: 50%;
+        }
+    }
+    &.onhold{
+        i{
+            background: @st-white url(/images/info-button@2x.png);
+            background-position: center;
+            border-radius: 50%;
+        }
+    }
+    &.submitted{
+        i{
+            background: @st-white url(/images/tick@2x.png);
+            background-position: center;
+            border-radius: 50%;
+        }
+    }
+   
+    &.draft{
+        i{
+            background: @st-white url(/images/clipboard-with-pencil@2x.png);
+            background-position: center;
+            border-radius: 50%;
+        }
+    }
+}

@@ -1,0 +1,284 @@
+#heroBanner{
+    width: 100%;
+    /* Global Margin Padding set to 0 */
+    .pad0{
+        padding: 0px (@v_space*1.5);
+    }
+    .pad1{
+        padding: 0px ;
+        @media @mobile-break
+        {
+            padding:0px (@h_space*1.5);
+            margin-top: (@h_space *1)
+        }
+    }
+    .mar0{
+        margin:0;
+    }
+  
+    
+    .row{
+        &.holder
+        {
+            margin: 0px !important;
+            @media @mobile-break {
+                margin:0 -(@h_space*1.5) !important;
+            }
+        }
+        position: relative;
+        
+       
+    }
+    @media  @mobile-break{
+        height: auto;
+        .mbIndicators{
+            bottom:0;
+            margin: (@v_space *1) 0;
+        }
+        .carousel-item>img{
+            height:220px;
+        }
+        
+        
+       
+    }
+    /*
+    .cover-fit
+    {
+        max-width: 129%;
+    }
+    .cover-fit1
+    {
+        max-width: 129%;        
+    } */
+    .customopacity
+    {
+        opacity: 1.0;
+        width: 75px;
+        &.rightb2b
+        {
+            margin-right: (@h_space*6.3);
+            @media @middesktop-break,@desktop-break,@mobile-break
+            {
+                margin-right:0;
+            }
+           
+        }
+        .leftarrow
+        {
+            margin-left: -(@h_space*2);
+            margin-top: -(@h_space*1.5);
+            @media @middesktop-break
+            {
+                margin-left: -(@h_space*2);
+                margin-top: -(@h_space*1.5);
+            }
+            @media @desktop-break
+            {
+                margin-left: -(@h_space*2);
+            margin-top: -(@h_space*1.5);
+            }
+            @media @mobile-break
+            {
+                left: -2px;
+            }
+        }
+        .rightarrow
+        {
+            margin-left: (@h_space*2);
+            margin-top: -(@h_space*1.5);
+            @media @middesktop-break
+            {
+                margin-left: (@h_space*2);
+                 margin-top: -(@h_space*1.5);
+            }
+            @media @desktop-break
+            {
+                margin-left: (@h_space*2);
+            margin-top: -(@h_space*1.5);
+            }
+            @media @mobile-break
+            {
+               right: 0px;
+            }
+        }
+        .gleftarrow
+        {
+            margin-left: -(@h_space*3);
+            margin-top: -(@h_space*1.5);
+            @media @middesktop-break
+            {
+                margin-left: -(@h_space*3);
+                margin-top: (@h_space*5.5);
+            }
+            @media @desktop-break
+            {
+                margin-left: -(@h_space*3);
+                 margin-top: -(@h_space*1.5);    
+            }
+            @media @mobile-break
+            {
+                left: -2px;
+            }
+        }
+        .grightarrow{
+            margin-left: (@h_space*3.5);
+            margin-top: -(@h_space*1.5);
+            @media @middesktop-break
+            {
+                margin-left: (@h_space*3.5);
+                margin-top: (@h_space*5.5);
+            }
+            @media @desktop-break
+            {
+                margin-left: (@h_space*3.5);
+                margin-top: -(@h_space*1.5);
+            }
+            @media @mobile-break
+            {
+               right: 0px;
+            }
+        }
+    }
+    .customcursor
+    {
+        cursor: pointer;  
+        width: 7px !important;
+        height: 7px !important;;
+        border-radius: 20px;
+        background:@st-sky-blue;
+        &.active{
+            border:solid 1px @st-sky-blue;
+            background: transparent;
+            padding:6px;
+            position: relative;
+            top: -3px;
+            &:before {
+                display: block;
+                content: '';
+                background: @st-sky-blue;
+                width: 6px;
+                height:6px;
+                border-radius: 20px;
+                position: absolute;
+                z-index: 1;
+                left: 3px;
+                top:3px;
+            }
+        }
+    }
+    .b2cspacingbanner
+    {
+        .b2cspacing
+        {
+           
+            .b2cimg
+            {
+                width: 387px;
+                height: 425px;
+                margin-left: -(@v_space*5.8);
+                max-width: 118%;
+                @media @middesktop-break
+                {
+                    width: auto;
+                    height: 411px;
+                    margin-left: (@v_space*.3);
+                    max-width: 99%;
+                }
+                @media @desktop-break
+                {
+                    width: 231px;
+                    height: 325px;
+                    margin-left: 4px;
+                    max-width: 100%;
+                }
+                @media @mobile-break{
+                    max-width: 100%;
+                    margin-left:0;
+                }
+
+            }
+        }
+    }
+    
+    #splitBanner-one
+    {
+        background-color: @st-white;
+    }
+    #splitBanner-two
+    {
+      background-color: @st-white;  
+    }
+    .spacing
+    {
+        margin-bottom: -(@v_space *2.0);
+        width: 387px;
+        height: 210px;
+        max-width: 118%;
+        margin-left: -(@h_space*5.8);
+        @media @middesktop-break
+        {
+            margin-bottom: -(@v_space *2.0);
+            width: auto;
+            height: 203px;
+            max-width: 99%;
+            margin-left: (@v_space *.3);
+
+        }
+        @media @desktop-break
+        {
+            margin-bottom: -(@v_space *1.9);
+            width: auto;
+            height: 161px;
+            max-width: 101%;
+            margin-left: -(@v_space *.2);
+        }
+        @media @mobile-break{
+            padding: (@v_space *1.5) 0 (@v_space *1) 0;
+            margin-bottom: -21px;
+            width: 100%;
+            height: auto;
+            margin-left: 0px;
+        }
+    }
+    
+    .b2bspacingbanner1
+    {
+        
+        padding: 0 0 (@v_space *1) 0;
+        @media @desktop-break{
+            padding: 0 0 (@v_space *1) (@h_space *.5);
+        }
+        @media @mobile-break
+        {
+            margin-top: -(@v_space*1);
+        }
+    }
+    .b2bspacingbanner2
+    {
+        
+        padding: (@v_space *1.5) 0 (@v_space *1) 0;
+        @media @desktop-break{
+            padding: (@v_space *1.3) 0 (@v_space *1) (@h_space *.5);
+        }
+        @media @mobile-break
+        {
+            margin-top: -(@v_space*2.6);
+        }
+    }
+    .b2cslider
+    {
+        padding: (@v_space *1.5) 0 (@v_space *1) 0;
+    }
+    .b2cspacing
+    {
+        
+        @media @mobile-break
+        {
+            padding: 0px;
+            margin-top: -(@h_space*.5);
+        }
+    }
+    
+
+}

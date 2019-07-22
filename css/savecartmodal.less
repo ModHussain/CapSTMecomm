@@ -1,0 +1,72 @@
+.modalsavecartdatasection{
+    .alphaBackground(@st-cool-grey-3,0.2);
+    background: @rgba;
+    margin: 0px;
+    width: 100%;
+    height: 91px;
+    margin-bottom:(@v_space*1.5); 
+    .modalsavecartblock{
+        padding-top: (@v_space* 2);
+        padding-left:(@v_space* 2);
+        .rborder{
+            .alphaBackground(@st-cool-grey-3,0.5);
+            border-right:1px solid @rgba; 
+        }
+        .savecartheading{
+            .st-text-size(11, 'Helvetica Roman');
+            color:@st-cool-grey-2;
+        }
+        .savecartdata{
+            .st-text-size(16, 'Helvetica Bold');
+            color:@st-cool-grey-1; 
+            &.description{
+                .st-text-size(13, 'Helvetica Bold');
+                color:@st-cool-grey-1;  
+            }
+            
+        }
+    }
+  
+}
+.restoredefault {
+    margin-top: (@v_space*1.5) !important;
+    margin-bottom: (@v_space*3.5) !important;
+    .st-text-size(12, 'Helvetica Roman') !important;
+}
+.labelText{
+    .st-text-size(12, 'Helvetica Roman') !important;
+    color:@st-cool-grey-1;
+    text-transform: uppercase;
+    padding-bottom: (@v_space*1.5) !important;
+    padding-top: (@v_space*7) !important;
+    margin: 0 !important;
+}
+.buttonsection {
+    .st-text-size(14, 'Helvetica Roman') !important;
+    padding: (@v_space* 3) 0 (@h_space* 1.5);
+    border-top: solid 1px #d6dce0;
+    text-align: right;
+    .pcard {
+        border-bottom: none;
+        border-top: solid 1px @st-cool-grey-1;
+        margin-right: (@v_space* 2.5);
+        padding-top: (@v_space* 2);
+    }
+    .restore{
+        color: @st-white;
+        background:@st-sky-blue;
+        padding: (@v_space*1.5) (@h_space* 3.5) (@v_space*1) (@h_space*3.5);
+        margin-left: (@v_space* 2.5);
+    }
+    .delete{
+        color: @st-white;
+        background:@st-sky-blue;
+        padding: (@v_space*1.5) (@h_space* 3.5) (@v_space*1) (@h_space*3.5);
+        margin-left: (@v_space* 2.5);
+        &.address{
+            background:@st-typing-blue;
+        }
+    }
+    
+}
+

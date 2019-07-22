@@ -1,0 +1,248 @@
+.footer{
+    background:@st-typing-blue;
+    margin-top:(@v_space*5.5);
+    @media @desktop-break
+    {
+        margin-top:(@v_space*2);
+    }
+    @media @mobile-break
+    {
+        margin-top:(@v_space*4);
+    }
+    .container{        
+        .taber{
+            margin-bottom: (@v_space*2);
+        }    
+        .t-space
+        {           
+            margin: (@v_space*4.5) (@h_space*.1) -(@v_space*.5) -(@h_space*1.3);
+            .st-text-size(15, 'Helvetica bold');
+            color:@st-sky-blue;         
+            &.news
+            {
+               padding-left: (@h_space*1.5); 
+               margin-bottom: (@v_space*2);
+               @media @mobile-break{
+                padding-left: (@h_space*.1);
+                margin-top:(@v_space*2);
+            }
+            }
+            &.latest{
+                padding-left: (@h_space*3);
+                margin-bottom: (@v_space*2);
+                @media @mobile-break{
+                    padding-left: (@h_space*.1);
+                    margin-top:(@v_space*2);
+                }
+            }
+            &.follow
+            {
+                margin: (@v_space*4.5) 0 (@v_space*1) 0; 
+            }
+            
+            @media @mobile-break{
+                margin: (@v_space*1) 0;
+                float: left;
+                width: 100%;
+                position: relative;
+                padding-top: (@v_space*1)
+            }
+        }
+        a>img{
+            margin-right: (@h_space*.5);
+            display: inline-block;
+            @media @mobile-break
+            {
+            margin-right: (@h_space*1.8);
+            }
+        }
+       ul 
+       {
+        margin-left: -7%;
+        margin-top: -3%;
+        @media @mobile-break{
+            margin-left: 4%;
+            margin-top: 1%;
+        }
+       }
+       li{
+           list-style-type: none;
+           display: block;
+           .st-text-size(14, 'Helvetica Roman');
+           padding: (@v_space*.5) 0;
+           a{
+               color: @st-white;
+               display: block;
+               &:hover{
+                color: @st-sky-blue; 
+               }
+           }           
+       }
+       .newstextbox
+       {
+        border-bottom-left-radius: (@h_space * .5);
+        border-top-left-radius: (@h_space * .5);
+       }
+       .emailtxtbox {
+        margin-left: -(@h_space*.3);
+    }
+       .btn-color
+       {             
+           .st-text-size(12, 'AvantGarde bold');
+           background-color: @st-sky-blue;
+           text-transform: uppercase;
+           margin:0;
+           padding: 0 (@h_space*2.5);
+           border: 1px solid @st-cool-grey-3;
+           border-radius: 5px;
+       }
+       
+       ::placeholder {
+        .st-text-size(12, 'AvantGarde');
+        color:@st-cool-grey-2;
+    }
+       .txt-center
+       {
+           text-align: center;
+       }
+       .latestcarousel{
+           position: relative;
+           .newscontainer
+           {
+               padding-left:0;
+           }
+           span.date{               
+           .st-text-size(12, 'Helvetica bold');
+            color:@st-cool-grey-2;
+           }
+           span.content{    
+            display: block;           
+            .st-text-size(14, 'Helvetica Roman');
+            color: @st-white;
+           }
+       
+        .owl-nav{
+            color:@st-sky-blue;
+            font-size: @base-font-size * 2px;
+            position: absolute;
+            top: -38%;
+           
+            .owl-prev{
+                position: absolute;
+                margin-top: 2%;
+                right: 11%;
+                @media @mobile-break{
+                    margin-top: 0px;
+                    right: 35px;
+                }
+                
+            }
+            .owl-next{
+                position: absolute;
+                right: 7%;
+                margin-top: 2%;
+                @media @mobile-break{
+                    margin-top: 0;
+                    right: 15px;
+                }
+            }
+            @media @mobile-break
+            {
+                position: absolute;
+                top: -40%;  
+            }
+        }
+    }
+
+
+    //media query //
+
+    @media @mobile-break
+    {
+        .col-sm-4>div:first-child {
+            .alphaBackground(@st-cool-grey-3, .3);
+            border-bottom: solid 1px @rgba;
+        }
+        
+        .accordianBorder{
+            .alphaBackground(@st-cool-grey-3, .3);
+            border-bottom: solid 1px @rgba;
+            padding-bottom: 12px;
+        }
+        
+        .taber{
+            margin-bottom:0;
+            &::after {
+                display: block;
+                content: "";
+                clear: both;
+              }
+        }
+        .taber.collapsed h6:after {
+            content: '\002B	';
+            .st-text-size(30, 'AvantGarde ');
+            color:@st-white;
+            float:right;
+            margin-top: -(@v_space*1.2);
+        }
+        .taber h6:after {
+            content: '\2212';
+            .st-text-size(30, 'AvantGarde ');
+            color:@st-white;
+            float:right;
+            margin-top: -(@v_space*1.2);
+        }
+        .taber {
+        
+            cursor: pointer;  
+        }
+   
+    }   
+       
+    }
+
+}
+.footer-strip{ 
+    background:@st-cool-grey-5;
+    .newsbanner
+       {
+        .st-text-size(12, 'Helvetica Roman');
+        color:@st-black;
+        padding: (@v_space*.8) 0;
+        margin: 0;
+       }
+       .linkbreak
+       {
+           display: none;
+           @media @mobile-break {
+           display: block;
+           }
+       }
+       a{
+        color: @st-black;
+           &.footerbottomlink{
+           padding-left: (@h_space *2.5);
+           @media @mobile-break{
+            padding: 0px (@h_space*.3) 0 (@h_space*2.6);
+           }
+       }
+       &:hover{
+        color: @st-typing-blue; 
+       }
+       &.footerlinks
+       {
+           @media @mobile-break{
+               &.sales{
+                padding: 0px (@h_space*1.6) 0 (@h_space*.3);
+               }
+               &.privacy{
+                padding: 0px (@h_space*.2) 0 (@h_space*2.2);  
+            }
+            &.sitemap{
+                padding: 0px (@h_space*3) 0 (@h_space*.3);  
+            }
+            
+           }
+       }
+    }
+}

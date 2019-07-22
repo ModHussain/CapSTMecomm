@@ -1,0 +1,75 @@
+.recentyViewed{
+    .container{
+        height: 480px;
+        padding-left:(@h_space*1.5); 
+        @media @mobile-break{
+            height: auto;
+        }
+        .top_space
+        {
+            padding-top: (@v_space*5);
+            @media @mobile-break{
+                margin: -(@v_space*.5);
+                padding-bottom: (@v_space*3);
+            }
+            border: 1px solid @st-cool-grey-4;
+            border-radius: 10px;
+            .left_space
+            {
+                padding-left: 0;                
+            }
+            a{
+                .recentviewall{
+                .st-text-size(14, 'AvantGarde Bold');
+                color:@st-sky-blue; 
+                position: relative;
+                bottom: 26px;
+                right: 15px;
+                @media @mobile-break{
+                    right:0;
+                }
+                &:hover{
+                    color:@st-typing-blue;
+                    i{
+                        svg{    
+                              fill:@st-typing-blue;
+                          }
+                    }
+                }
+             }
+            }
+            
+            .free_sampleimg
+            {
+                width:362px;
+                height:490px;
+                @media @mobile-break{
+                    width: auto;
+                    height: auto;
+                    padding-left: (@h_space*2);
+                }
+            }
+            .moblieview
+            {
+                @media @mobile-break{
+                    width: auto;
+                    height: auto;
+                    margin-left:(@h_space*2);
+                    margin-top: -20%;                   
+                }
+            }           
+        }
+        .recentcarousel{
+            @media @wideScreen-break{
+                right:40px;
+            }
+            .owl-stage-outer{
+                padding: (@v_space*.5) (@h_space*0);
+                @media @mobile-break{
+                    padding: (@v_space*.5) (@h_space*0);
+                }
+            }
+        }
+        
+    }
+}

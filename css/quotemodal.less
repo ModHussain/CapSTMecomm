@@ -1,0 +1,84 @@
+#quotemodal2{
+    .quotecreationmodalblock{
+        margin-top: (@h_space*2);
+        border-top: 1px solid @st-typing-blue;
+        label{
+            .st-text-size(12, 'Helvetica Roman');
+            color:@st-cool-grey-1;
+            text-transform: uppercase;
+            margin-bottom:(@h_space*.5);
+            sup{
+                color: @st-red;
+                .st-text-size(12, 'Helvetica Roman');
+            }
+        }
+        label[class="custom-control-label"]{
+            padding-top: (@h_space*.6);
+        }
+    }
+    input[type=date]::-webkit-inner-spin-button,
+            input[type=date]::-webkit-outer-spin-button,
+             {
+              -webkit-appearance: none;
+            }
+            input[type="date"]::-webkit-calendar-picker-indicator {
+                color: transparent;
+                background: none;
+                z-index: 1;
+              }
+              input[type="date"]::-webkit-datetime-edit{ 
+                  color: transparent;
+                 }
+                
+                input[type="date"]:focus::-webkit-datetime-edit{
+                     color:@st-cool-grey-1;
+                     }
+              input[type="date"]{
+                background:  @st-white url(../images/calendar.png) no-repeat 97% center ;
+                display: block;
+                @media @middesktop-break{
+                    right: 65px;
+                }
+                
+              }
+
+              .addressModOpt{
+                input.askingprice{
+                    width: 80%;
+                    margin-left: (@h_space*3) !important;
+                }
+                .prodDesc{
+                    &.minvalue{
+                        padding-left: (@h_space*2);
+                    }
+                }
+                label.quantitylabel{
+                    margin: (@h_space*1) 0 (@h_space*1) !important;
+                    padding-left: (@h_space*2);
+                    .st-text-size(12, 'Helvetica Bold');
+                    color:@st-typing-blue;
+                }
+                label.askingprice{
+                    margin: (@h_space*1) 0 (@h_space*1) !important;
+                    padding-left: (@h_space*4.5);
+                    .st-text-size(12, 'Helvetica Bold');
+                    color:@st-typing-blue; 
+                }
+                .applyBtn{
+                    padding-top: 0px;
+                    a.addtoquote{
+                        .st-text-size(14, 'Avantgarde Bold');
+                        color:@st-sky-blue; 
+                        margin-right: (@h_space*2.5);
+                        &:hover{
+                            color:@st-typing-blue; 
+                        }
+                    }
+                    button.requestquote{
+                        width: auto;
+                        margin-top: (@h_space*2);
+                    }
+                }
+              }
+             
+}

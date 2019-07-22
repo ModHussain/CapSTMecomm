@@ -1,0 +1,271 @@
+.manageSavedCard{
+    .st-text-size(12, 'Avantgarde Bold');
+    float: right;
+}
+.sslEncryptionTxt{
+    float: left;
+    .st-text-size(14, 'Helvetica bold');
+    color: @st-cool-grey-1;
+    margin-bottom: (@v_space*1);
+}
+.cardType{
+    .size(50px,36px);
+    float: left;
+    &.master{
+        background: url(../images/mastercard.png) center 12px no-repeat;
+    }
+    &.paypal{
+        background: url(../images/paypal.png) center 12px no-repeat;
+    }
+    &.visa{
+        background: url(../images/visa-1.png) center 12px no-repeat;
+    }
+}
+.cardInfo{
+    float: left;
+    max-width: 170px;
+    border-left: solid 1px @st-cool-grey-3;
+    padding-left:(@h_space*1.5);
+    margin-left: (@h_space/2);
+    .cardDetails{
+        .st-text-size(14, 'Helvetica Bold');
+        color: @st-cool-grey-1;
+    }
+    .cardSet{
+        .st-text-size(12, 'Helvetica Roman');
+        color: @st-cool-grey-1;
+        text-transform: uppercase;
+        display: inline-block;
+        padding-top: (@v_space/2);
+        a{
+            .st-text-size(12, 'Avantgarde Bold');
+        }
+    }
+}
+.cvvDetails{
+    float: right;
+    margin-right: (@h_space*1);
+    .cvvHeading{
+        float: left;
+        label{
+            margin-top: (@v_space*1.5);
+            .st-text-size(12, 'Helvetica bold');
+            color: @st-cool-grey-1;
+        }
+    }
+    .cvvNo{
+        float: left;
+        .size(90px,40px);
+        padding: 0 (@h_space*1);
+    }
+    a{
+        float: left;
+        margin-top: (@v_space*1);
+    }
+    
+}
+.cardTabSection{
+    .nav-pills{
+        border-right: solid 1px @st-cool-grey-3;
+        height: 100%;
+        a.nav-link{
+            border-radius: 0;
+            padding: (@v_space*3.5) 0 (@h_space*3);
+            border-bottom: solid 1px @st-cool-grey-3;
+            &.active{
+                .alphaBackground(@st-sky-blue1,.4);
+                background: @rgba;
+                border-bottom: solid 3px @st-sky-blue !important;
+            }
+            label{      
+                .st-text-size(14, 'Helvetica Roman');
+                color: @st-cool-grey-1;
+                min-height: 35px;
+            }
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.cartContentSection{
+    padding-top: (@v_space*1.9);
+    .tab-pane{
+        width: 98%;
+        .ccForm{
+            margin:0;
+            padding: 0 (@h_space*2);
+            .st-text-size(12, 'Helvetica Roman');
+            label{
+                color: @st-cool-grey-1;               
+            }
+            select{
+                .size(145px,40px);                
+                color: @st-cool-grey-2;
+                .st-text-size(12, 'Helvetica Roman');
+            }
+            .cardyear{
+                margin-left: -(@h_space*3.5);
+                @media @middesktop-break
+                {
+                    margin-left: 0px;
+                }
+            }
+            input[type="password"]{
+                .size(90px,40px);
+                max-width: 100%;
+            }
+            input[type="text"]{
+                .size(315px,40px);
+                max-width: 100%;
+                &.savecardtextbox{
+                    .size(370px,40px);
+                }
+            }
+            .cvvInfo{
+                display: inline-block;
+                padding: (@v_space*1);
+            }
+        }
+    }    
+}
+
+/* Custom Radio Button */
+.radioButton {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding: (@v_space/2) 0 0 (@h_space*8);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &.ccBg{
+        background: url(../images/ccImg.png) 50px top no-repeat;
+        padding-left: (@h_space*9.5);
+    }
+    &.paypalBg{
+        background: url(../images/paypal.png) 50px top no-repeat;
+        padding-left: (@h_space*8.5);
+    }
+    &.allpayBg{
+        background: url(../images/allPay.png) 50px top no-repeat;
+        padding-left: (@h_space*9);
+    }
+    &.applepayBg{
+        background: url(../images/applePay.png) 50px top no-repeat;
+        padding-left: (@h_space*11);
+    }
+    /* Hide the browser's default radio button */
+    input{
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+    /* Create a custom radio button */
+    .checkmark {
+        position: absolute;
+        top: 5px;
+        left: 20px;
+        height: 15px;
+        width: 15px;
+        background-color: @st-white;
+        border-radius: 50%;
+        border:solid 2px @st-cool-grey-2;
+    }
+  } 
+  
+  /* When the radio button is checked, add a blue background */
+  .radioButton input:checked ~ .checkmark {
+    background-color: @st-sky-blue;    
+    border:solid 2px @st-sky-blue;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .radioButton input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .radioButton .checkmark:after {
+       top: 3px;
+      left: 3px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: @st-white;
+  }
+  /* Custom Radio Button */
+
+/* Custom Checkbox */
+  .customCheckBox {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .customCheckBox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color:@st-white;
+    border: solid 2px @st-cool-grey-2;
+    border-radius:5px;
+  }
+  
+    
+  /* When the checkbox is checked, add a blue background */
+  .customCheckBox input:checked ~ .checkmark {
+    background-color: @st-sky-blue;
+    border: solid 2px @st-sky-blue;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .customCheckBox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .customCheckBox .checkmark:after {
+    left: 3px;
+    top: 0px;
+    width: 5px;
+    height: 8px;
+    border: solid @st-white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }

@@ -1,0 +1,78 @@
+#productscarousel{
+    background: @st-white;
+    .container{
+        #counter
+        {
+            .st-text-size(13, 'AvantGarde');
+            color:@st-dark-blue; 
+            padding-bottom: (@h_space*1.5);
+        }
+        .brand{
+            .st-text-size(22, 'AvantGarde');
+            color:@st-dark-blue;
+            padding-top: (@v_space*3);
+            .hr_brand{
+                width: 212px;
+                @media @mobile-break {                
+                width: 113px;
+                }
+                height: 3px;
+                border-radius: 1.5px;
+                background-color:@st-sky-blue;
+                margin-top: (@h_space*1.5);
+                @media @mobile-break {
+                    margin-top: 10px;
+                }
+                &.hrwidth
+                {
+                    width: 181px;
+                }
+                &.carthr_brand{
+                    margin-top: -(@h_space*1);
+                }
+            }
+            
+            
+        }
+        .topspace
+        {
+            margin: (@v_space*3.2) (@h_space*1);
+        }
+        .owl-carousel {   
+                &.asso-carousel {
+                    .owl-nav {
+                        width: 100%;
+                        position: absolute;
+                        top: 39%;
+                        left: -22px;
+                        height: 0;
+                        @media @desktop-break{
+                            position: absolute;
+                            top: 36%;
+                            left: 11px;
+                        }
+                        .owl-prev {
+                            margin-left: -(@h_space*.3);
+                            @media @desktop-break{
+                                margin-left: -(@h_space *1.5);
+                        }
+                            @media @mobile-break {
+                                margin-left: -(@h_space*.5);
+                            }
+                        }
+            
+                        .owl-next {
+                            margin-right: -(@h_space*3.3);
+                            @media @desktop-break{
+                                margin-right: -(@h_space*1);
+                            }    
+                            @media @mobile-break {
+                            margin-right: -(@h_space*4.5);
+                            }
+                        }
+                    }
+                }
+            }
+    }
+   
+}

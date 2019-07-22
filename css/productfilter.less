@@ -1,0 +1,280 @@
+#productfilter{
+    #filetrDivMobile{
+        padding:(@v_space*2) (@h_space*1.5);
+        .st-text-size(16, 'AvantGarde bold');
+        text-align: center;
+        color: @st-sky-blue;
+        border-top:solid 1px @st-cool-grey-3;
+    }
+    .filterButton {
+        padding: (@v_space*1) 0px;
+        width : 50%;
+        border-radius: 0px;
+        .alphaBackground(@st-cool-grey-3,0.1);
+        background-color:@rgba;
+        color: @st-cool-grey-1;
+        font-weight: bold;
+        border: 1px solid @st-cool-grey-3;
+        margin: 0px;
+    }
+    
+    .filterheadingAll {
+        background-color:@st-white;
+        min-width: 350px;
+        margin: (@v_space*1) (@h_space*1.5);
+        visibility: visible;
+    }
+    .filterclearAll {
+        .st-text-size(12, 'Helvetica');
+        color:@st-sky-blue;
+        cursor: pointer;
+        float: right;
+        padding-right: (@v_space*1);
+        padding-top: (@v_space*.8);
+    }
+    .filterExpandAll {
+        .st-text-size(12, 'Helvetica');
+        color: @st-sky-blue;
+        padding-left: (@h_space*.5); 
+    }
+    .filterCollapseAll {
+        .st-text-size(12, 'Helvetica');
+        color: @st-sky-blue;
+        padding-left: (@h_space*.5); 
+    }
+    .filterExpandAll:before {
+        content: '\002B	';
+        .st-text-size(30,'Helvetica');
+        color: @st-sky-blue;
+        float: left;
+        margin-top: -3px;
+    }     
+    .filterCollapseAll:before {
+        content: '\2212';
+        .st-text-size(30,'Helvetica');
+        color: @st-sky-blue;
+        float: left;
+        margin-top: -3px;
+    }
+    @media @mobile-break {
+        .filterinfo :before {
+            content: '\2212';
+            .st-text-size(30,'Helvetica');
+            color: @st-sky-blue;
+            float: left;
+            margin-top: -3px;
+        }
+        .filterinfo .collapsed:before {
+            content: '\002B';
+            .st-text-size(30,'Helvetica');
+            color: @st-sky-blue;
+            float: left;
+            margin-top: -3px;
+        }
+        .filterinfo .collapsedminus:before {
+            content: '\2212';
+            .st-text-size(30,'Helvetica');
+            color: @st-sky-blue;
+            float: left;
+            margin-top: -3px;
+        }
+        .filterinfo .collapsedplus:before {
+            content: '\002B';
+            .st-text-size(30,'Helvetica');
+            color: @st-sky-blue;
+            float: left;
+            margin-top: -3px;
+        } 
+    }
+   
+
+    .border-bottom {
+        border-bottom: 1px solid @st-cool-grey-3;
+    }
+    .productFilterButton {
+        display: none;
+        background-color: @st-white;
+    }
+    .filterExpandSection {
+        display: none;
+    }
+    .container{
+        background: @st-white;
+        .alphaBackground(@st-cool-grey-3, .3);
+        border-bottom: 1px solid @rgba;
+        h5{
+            &.productsheading
+        {
+            .st-text-size(24, 'Helvetica');
+            font-weight: bold;
+            margin: 0px -(@h_space*.5);
+            color:@st-typing-blue;
+            padding: (@v_space*1) 0px (@v_space*1.5);
+        }
+        span.productscount
+        {
+            font-weight: normal;
+        }
+        }
+       &.filtersection
+       {
+        border-bottom: none;
+            @media @mobile-break
+            {
+                display: none;
+            }
+        .filterarea {
+            display: flex;
+            background-color:@st-white;
+            min-width: 100%;
+            overflow-x: auto; 
+            visibility: hidden;
+            &:hover{
+                visibility: visible;
+            }
+
+            
+            
+
+            .filtercontent {
+                background-color:@st-white;
+                min-width: 233px;
+                margin: (@v_space*1.5) (@h_space*2) (@v_space*1.5) 0;
+                visibility: visible;
+                @media @mobile-break {
+                    margin: (@v_space*1.5) 0 (@v_space*1.5) 0;
+                }
+
+                .filterheading
+                {
+                    .filterinfo
+                    {
+                        .st-text-size(12, 'Helvetica Roman');
+                        color:@st-typing-blue;
+                        padding-left: (@h_space*.5);
+                        @media @mobile-break {
+                            a {
+                                color: @st-typing-blue;
+                                font-weight: bold;
+                            }
+                            
+                        } 
+                    }
+                    .filterclear
+                    {
+                        .st-text-size(12, 'Helvetica Roman');
+                        color:@st-sky-blue;
+                        cursor: pointer;
+                        float: right;
+                        padding-right: (@v_space*1);
+                        padding-top: (@v_space*.8);
+                    }
+                }
+                .filterset
+                {
+                    min-width: 100%;
+                    height: 230px;
+                    overflow-y: auto; 
+                    margin-top: (@h_space*1.8); 
+                    overflow-x: hidden;
+                    .custom-control{
+
+                        .custom-control-label
+                        {
+                            .st-text-size(14, 'Helvetica Roman');
+                            color:@st-typing-blue;
+                        }
+                    }
+                    .custom-control-label:before{
+                        .alphaBackground(@st-cool-grey-3,0.2);
+                        background-color:@rgba;
+                      } 
+                      
+                      .custom-radio .custom-control-input:checked~.custom-control-label,.custom-checkbox .custom-control-input:checked~.custom-control-label{
+                        &::before{
+                            background-color:@st-sky-blue;
+                      }
+                    }
+                      
+                    //   .custom-control-label {
+                    //     &.radiobtn:before{
+                    //         .alphaBackground(@st-cool-grey-3,0.2);
+                    //         background-color:@rgba;
+                    //   }
+                    // }
+                    
+                    //   .custom-checkbox .custom-control-input[type="radio"]:checked~.custom-control-label{
+                    //    &.radiobtn:before{
+                    //     background-color:@st-sky-blue;
+                    //   }
+                    // }
+                   #tempatureform
+                   {
+                       margin: (@v_space*1.7);
+                       .degreeclass
+                       {
+                           margin-left: -(@h_space*2.2);
+                        .st-text-size(15.5, 'Helvetica Roman');
+                        color:@st-cool-grey-1;
+                       }
+                       .temptext{
+                        .st-text-size(15.5, 'Helvetica Roman');
+                        color:@st-cool-grey-1;
+                       }
+                   }
+                }
+                .filterset::-webkit-scrollbar{
+                        width:5px;
+                        margin-top:15px;
+                        margin-right: 15px;
+                       background-color: @st-white;
+                }
+          
+                .filterset::-webkit-scrollbar-thumb{
+                    width:10px;
+                    border-radius: 10px;
+                    margin-top:15px;
+                    .alphaBackground(@st-cool-grey-3,0.2);
+                    background-color:@rgba;
+                }
+                
+              }
+          }
+          
+          
+          .filterarea::-webkit-scrollbar
+          {
+                 height:7px;
+                margin-top:15px;
+                .alphaBackground(@st-cool-grey-3,0.4);
+              background-color: @rgba;
+          }
+          
+          .filterarea::-webkit-scrollbar-thumb
+          {
+            width:10px;
+              border-radius: 10px;
+              margin-top:15px;
+              background-color:@st-cool-grey-3;
+          }
+          
+          
+          
+       }
+    }
+    hr {
+        border: solid @st-cool-grey-3;
+        border-width:(@h_space*.1) 0 0;
+        clear: both;
+        height: 0px;
+        width: 108%;
+        margin-left: -52px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    @media @mobile-break
+            {
+                width: 100% !important;
+            }
+    
+}

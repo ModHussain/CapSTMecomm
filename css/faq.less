@@ -1,0 +1,78 @@
+.faqcontainer
+{
+    background: @st-white;
+    .faqHeading{
+        padding: 0 (@h_space*1.5) (@v_space*1.9);
+        border-bottom: solid 1px @st-cool-grey-3;
+        .heading{
+            .st-text-size(24, 'Helvetica Bold');
+            color: @st-typing-blue;
+            padding-left:(@h_space*.5); 
+        }
+    }
+    .faqsection{
+        padding: 0 (@h_space*1.5) (@v_space*1.9);
+        .brand{
+            .st-text-size(18, 'Helvetica Bold');
+            color:@st-typing-blue;
+            padding-top: (@v_space*2);
+            .hr_brand{
+                width: 180px;
+                height: 3px;
+                border-radius: 1.5px;
+                background-color:@st-sky-blue;
+                margin-top: 15px;
+                
+            }
+        }
+        .accordion{
+            .accordion_item{
+                .alphaBackground(@st-cool-grey-3,0.5);
+                border-bottom: 1px solid @rgba;
+                padding: (@h_space*2) 0;
+                &:last-child{
+                    border-bottom:none;
+                }
+            }
+            .accordion_title{
+                cursor:pointer;
+                .st-text-size(14, 'Helvetica Bold');
+                color:@st-sky-blue;
+                &.heading{
+                    color:@st-typing-blue;
+                    &::before{
+                        content: url(../images/accorminus.png);
+                        float: right;
+                        margin-right: 20px;
+                    }
+                    &.collapsed{
+                        color:@st-sky-blue;
+                        &::before{
+                            content: url(../images/accordplus.png);
+                            float: right;
+                            margin-right: 20px;
+                        } 
+                        
+                    }
+                }
+                
+               
+               
+            }
+            .accordion_content {
+              
+                .st-text-size(13, 'Helvetica Roman');
+                color:@st-cool-grey-1;
+                margin-top: (@h_space*2.2);
+                margin-bottom: (@h_space*.5);
+            }
+            
+        }
+        .borderb{
+            .alphaBackground(@st-cool-grey-3,0.5);
+                border-bottom: 1px solid @rgba;
+        }
+    }
+    
+}
+    

@@ -1,0 +1,112 @@
+//Font Families
+
+// Typography --------------
+@base-font-size: 16; // base pixel font size. Used as a default for px -> (r)em conversions
+
+//Text weight global properties
+@weight-bold: 900; 
+@weight-medium-bold:600;
+@weight-medium: 500; 
+@weight-roman: 400;
+@weight-medium-light:300;
+@weight-light:200;
+@z-page: 1;
+
+//using relative path since source directory can change based on Hybris folder stracture
+@base-url : '../';
+@font-path : '@{base-url}fonts';
+@image-path : '@{base-url}images';
+@icon-path : '@{base-url}icons';
+@default-font-family:Arial, Helvetica, sans-serif;
+
+/* Wrapper dimension and responsive views */
+@wide-screen: 1366px;
+@mid-desktop:1244px;
+@desktop:990px;
+@mobile: 320px;
+
+
+/* Breakpoints */
+@mobile-break:~"only screen and (min-width : 360px) and (max-width: 767px)"; /*Mobile Only*/   
+@ipad-break:~"(min-device-width: 481px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)";  /*Tablet(from 571px up infinite)*/
+@ipadMini-break:~"(min-device-width: 481px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1)";  /*Tablet(from 571px up infinite)*/
+@ip-x: ~"only screen and (min-device-width : 375px) and (max-device-height : 812px) and (-webkit-device-pixel-ratio : 3)";
+@desktop-break:~"(min-width: 768px) and (max-width: 1199px)";  /*Desktop (from 571px up infinite)*/
+@middesktop-break:~"(min-width: 1200px) and (max-width: 1280px)"; 
+@wideScreen-break:~"(min-width: 1281px)";
+@landscape: ~" and (orientation : landscape)";
+@portrait: ~" and (orientation : portrait)";
+@ipad: ~"@{ipad-break}";
+@ipad-portrait: ~"@{ipad-break}@{portrait}";
+@ipad-landscape: ~"@{ipad-break}@{landscape}";
+@ipadMIni: ~"@{ipadMini-break}";
+@ipadMIni-portrait: ~"@{ipadMini-break}@{portrait}";
+@ipadMIni-landscape: ~"@{ipadMini-break}@{landscape}";
+@mobile-portrait: ~"@{mobile-break}@{portrait}";
+@mobile-landscape: ~"@{mobile-break}@{landscape}";
+// IpHone X, XR, XS, XS Max
+@ipx-portrait: ~"only screen and (min-device-width : 375px) and (max-device-height : 812px) and (-webkit-device-pixel-ratio : 3) @{portrait}";
+@ipx-landscape: ~"only screen and (min-device-width : 414px) and (max-device-height : 896px) and (-webkit-device-pixel-ratio : 3) @{landscape}";
+
+
+/* Use this only for vertical spacing (margin/padding). Ex: margin: (@v_space*1.5) (@h_space*1.5) = margin: 15px 15px;*/
+@v_space:10px;
+@h_space:10px;
+@z-index-modal:10000;
+
+/* Primary Blue color palette */
+@st-dark-blue:#002052;
+@st-navyblue: #16387a;
+@st-typing-blue:#001c51;
+@st-sky-blue:#39a9dc;
+@st-bluish:#2596c9;
+@st-sky-blue1:#d9e9f6;
+@st-cloudy-blue:#a7c3d9;
+/*@st-dark-blue:#002025; 
+@st-dark-blue3:#001a54;
+@st-dark-blue4:#003366;*/
+
+/* Primary Grey color palette */
+@st-black:#000000;
+@st-cool-grey-1:#4f5251;
+@st-cool-grey-2:#90989e;
+@st-cool-grey-3:#b9c4ca;
+@st-cool-grey-4:#e8e8e8;
+@st-cool-grey-5:#e9e9e9;
+@st-cool-grey-6:#f6f6f6;
+@st-cool-grey-8:#bbbbbb;
+@st-dark-grey:#58585a;
+@st-dark-grey-1:#333333;
+
+
+/* Secondary Color palettes */
+@st-light-green:#bbcc00;
+@st-dark-green:#003d14;
+@st-pinkish-red: #e10b2a;
+@st-yellow:#ffd300; 
+@st-maroon:#5c0915;
+@st-pink:#d4007a;
+@st-purple:#590d58;
+@st-white:#ffffff;
+@st-red:#ff0000;
+
+
+/* border colors */
+// @border-color-00:#000;
+// @border-color-01:#06c;
+// @border-color-02:#0090ff;
+// @border-color-03:#1278c6;
+// @border-color-04:#222;
+// @border-color-05:#2a2a2a;
+// @border-color-06:#f1f2f3;
+// @border-color-07:#acbbc3;
+// @border-color-08:#01abf6;
+
+/* shadow colors */
+// @shadow-color-0:#000;
+// @shadow-color-1:#0090ff;
+// @shadow-color-2:#222;
+// @shadow-color-3:#c00;
+// @shadow-color-4:#ccc;
+// @shadow-color-5:#fff;
+

@@ -1,0 +1,42 @@
+.guestCheckout{
+    padding:0 (@h_space*2);
+    .heading{
+        .st-text-size(20, 'Helvetica bold');
+        color:@st-typing-blue;
+    }
+    .description{
+        .st-text-size(14, 'Helvetica Roman'); 
+        color:@st-typing-blue;
+        margin-top: (@v_space*2);            
+    }
+    .leftPart{
+        border-right: solid 1px @st-cool-grey-3;
+        height: inherit;
+        min-height: 408px;
+        
+        .actionBtn{
+            margin-top: (@v_space*2);
+            padding-right: (@h_space*4.5);
+            .loginRegBtn{
+                float: right;
+                .size(200px,40px);
+                padding: (@v_space*1) 0 (@v_space/2);
+                .st-text-size(14, 'Avantgarde Bold'); 
+                color: @st-white;
+            }    
+        }
+    }
+    .rightPart{
+        padding-left: (@h_space*1.5);
+        .tagdescription{
+            .st-text-size(13, 'Helvetica Roman'); 
+                color: @st-cool-grey-1;
+                padding-top: (@h_space*1.2);
+        }
+        .guestCheckoutBtn{
+            padding: (@v_space*1.2) (@h_space*2.5) (@v_space*.7);
+            .st-text-size(14, 'Avantgarde Bold');
+            color: @st-white;
+        }
+    }
+}

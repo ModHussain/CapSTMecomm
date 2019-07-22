@@ -1,0 +1,84 @@
+.RequestQuotesection
+{
+    background: @st-white;
+
+    .RequestquoteHeading{
+        padding: 0 (@h_space*1.5) (@v_space*1.9);
+        border-bottom: solid 1px @st-cool-grey-3;
+        .heading{
+            .st-text-size(24, 'Helvetica Bold');
+            color: @st-typing-blue;
+            padding-left:(@h_space*1); 
+        }
+        
+            }
+
+    .quotecreationblock{
+        .alphaBackground(@st-cool-grey-3,0.2);
+        background: @rgba;
+        
+        .quotedatasection{
+            margin-top:(@h_space*3.4);
+            padding-left: (@h_space*4);
+            margin-bottom: (@h_space*2.5);
+            &.datasectionright{
+                padding-right: 0;
+                padding-left: (@h_space*5.5);
+                .alphaBackground(@st-cool-grey-3,0.5);
+                border-left: 1px solid @rgba;
+            }
+            label{
+                .st-text-size(12, 'Helvetica Roman');
+                color:@st-cool-grey-1;
+                text-transform: uppercase;
+                
+                sup{
+                    color: @st-red;
+                    .st-text-size(12, 'Helvetica Roman');
+                }
+            }
+            label[class="custom-control-label"]{
+                padding-top: (@h_space*.6);
+            }
+            input[type="text"],input[type="date"]{
+                width: 248px;
+                @media @middesktop-break{
+                    width: 225px;
+                }
+                @media @desktop-break{
+                    width: auto;
+                }
+            }
+            input[type=date]::-webkit-inner-spin-button,
+            input[type=date]::-webkit-outer-spin-button,
+             {
+              -webkit-appearance: none;
+            }
+            input[type="date"]::-webkit-calendar-picker-indicator {
+                color: transparent;
+                background: none;
+                z-index: 1;
+              }
+              input[type="date"]::-webkit-datetime-edit{ 
+                  color: transparent;
+                 }
+                
+                input[type="date"]:focus::-webkit-datetime-edit{
+                     color:@st-cool-grey-1;
+                     }
+              input[type="date"]{
+                background:  @st-white url(../images/calendar.png) no-repeat 97% center ;
+                display: block;
+                @media @middesktop-break{
+                    right: 65px;
+                }
+                
+              }
+            
+        }
+        
+        
+        
+    }
+
+}

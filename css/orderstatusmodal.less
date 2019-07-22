@@ -1,0 +1,85 @@
+#orderstatusmodal{
+    .st-modal-md{
+        .modal-content{
+            width: 685px;
+            padding: (@v_space*4) (@h_space*3) (@v_space*1.5);
+            margin-left: (@h_space*7);
+            @media @mobile-break{
+                margin-left: auto;
+            }
+        }
+    }
+    .commenttable{
+
+        padding: 0px (@h_space*2);
+        margin-bottom: (@h_space*2);
+        
+           
+            .tableheading{
+               border-bottom: 1.4px solid @st-cool-grey-3;
+                height: 65px;
+                .st-text-size(12, 'Helvetica bold');
+                background: @st-white;
+                text-transform: uppercase;
+                color: @st-typing-blue;
+                padding: (@h_space*3) (@h_space*5.6) (@h_space*3)  (@h_space*5.4) ; 
+                text-align: left;
+                @media @mobile-break{
+                    padding: (@h_space*3) (@h_space*3) (@h_space*3)  (@h_space*2.4) ; 
+                }
+            }
+         
+                
+            .bodysection{
+                    .st-text-size(16, 'Helvetica roman');
+                    text-align: left;
+                    color:@st-cool-grey-1;
+                    padding: (@h_space*2.3) (@h_space*2.2) (@h_space*2) (@h_space*5.1);
+                    .alphaBackground(@st-cool-grey-3,.5);
+                     border-bottom: 1px solid  @rgba;
+                    .trackid{
+                        .st-text-size(14, 'Avantgarde Bold');
+                        color: @st-sky-blue;
+                    }
+                    @media @mobile-break{
+                        padding: (@h_space*2.3) (@h_space*0) (@h_space*2) (@h_space*2.6);
+                    }
+                }
+        .ordersection{
+                overflow-x: hidden;
+                overflow-y: auto;
+                height: 315px;
+                margin-top: (@h_space*1);
+        }
+        .ordersection::-webkit-scrollbar
+          {
+                width:5px;
+                margin-top:1px;
+                margin-left:55px;
+              background-color: @st-white;
+              border-radius: 50px;
+          }
+          
+          .ordersection::-webkit-scrollbar-thumb
+          {
+                 width:5px;
+              margin-top:15px;
+              margin-left:55px;
+              .alphaBackground(@st-cool-grey-3,.5);
+              background-color:@rgba;
+              border-radius: 50px;
+          }
+                
+    }
+
+    .donesection{
+                margin-top:(@h_space*2);
+               button{
+                margin-bottom: (@h_space*.5);
+                padding:(@h_space*1.5) (@h_space*4) (@h_space*1.2) (@h_space*4) !important;
+                .st-text-size(16, 'Avantgarde Bold');
+                
+               }
+    }
+    
+}

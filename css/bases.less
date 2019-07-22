@@ -1,0 +1,76 @@
+body {
+    .st-ff-1();
+    color:@st-dark-grey;
+    padding: 0 !important;
+}
+a {
+    text-decoration:none;
+    &:link,
+        &:visited {
+        color: @st-sky-blue;
+        .icon {
+            color: @st-sky-blue;
+        }
+    }
+    &:hover,
+        &:active,
+        &:focus {
+        color: @st-typing-blue;
+        text-decoration: none;
+        .icon {
+            color: @st-typing-blue;
+        }
+    }
+}
+
+*, *:after, *:before { .box-sizing(border-box); outline:0 !important;}
+
+*{
+    -webkit-font-smoothing: antialiased;
+    // read http://elliotjaystocks.com/blog/kerning/ for an explanation of the following
+    -moz-font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern=1";
+    -ms-font-feature-settings: "kern";
+    -o-font-feature-settings: "kern";
+    -webkit-font-feature-settings: "kern";
+    font-feature-settings: "kern";
+}
+/* Prevent any object from being highlighted upon touch event*/
+* { -webkit-tap-highlight-color: transparent; }
+
+h1, h2, h3, h4, h5, h6 { font-weight:normal; }
+input, button{
+    &:focus{
+        box-shadow: none !important;
+    }
+}
+.ui-loader {display: none;}
+
+
+.scrollbar {
+	overflow-y: auto;
+    &::-webkit-scrollbar {
+        width: 5px;
+        height:83px ;
+        background-color: #F5F5F5;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      .alphaBackground(@st-cool-grey-3,0.5);
+      background:@rgba;
+      border: 1px solid #ccc;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      .alphaBackground(@st-cool-grey-3,0.9);
+      background:@rgba;
+      border: 1px solid #aaa;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        .alphaBackground(@st-cool-grey-3,0.9);
+      background:@rgba;
+    }
+    &::-webkit-scrollbar-thumb:active {
+      background: linear-gradient(left, #22ADD4, #1E98BA);
+    }
+}

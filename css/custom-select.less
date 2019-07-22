@@ -1,0 +1,96 @@
+.nav-item.leftspace select {
+    display: none !important;
+}
+
+.dropdownselect { 
+    cursor: pointer;
+    display: block;
+    outline: none; 
+    position: relative; 
+    background-color: transparent;
+    border:none;
+    color:@st-dark-grey;
+    padding:10px 10px 0;
+    cursor: pointer;
+    .st-text-size(12, 'Helvetica Roman');
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    width: auto;
+}
+ 
+.dropdownselect.open .list {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
+    .dropdown-menu{
+        display: block;
+        position: absolute;
+        top:5px;
+        padding: 0;
+    }
+}
+
+.dropdownselect.open .option {
+    cursor: pointer;
+}
+
+.dropdownselect.wide {
+    width: 100%;
+}
+
+.dropdownselect.wide .list {
+    left: 0 !important;
+    right: 0 !important;
+}
+
+.dropdownselect .list {
+    box-sizing: border-box;
+    -webkit-transition: all 0.15s cubic-bezier(0.25, 0, 0.25, 1.75), opacity 0.1s linear;
+    transition: all 0.15s cubic-bezier(0.25, 0, 0.25, 1.75), opacity 0.1s linear;
+    -webkit-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    transform: scale(0.75);
+    -webkit-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    padding: 3px 0;
+    opacity: 0; 
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+}
+
+.dropdownselect .list:hover .option:not(:hover) {
+    background-color: transparent !important;
+}
+
+.dropdownselect .option {
+    cursor: default;
+    font-weight: 400;
+    line-height: 40px;
+    outline: none;
+    color:@st-typing-blue;
+    padding:(@v_space/2) (@h_space*2);
+    text-align: left;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.dropdownselect .option:hover{
+    color:@st-sky-blue;
+}
+
+.dropdownselect .option.selected {
+    .alphaBackground(@st-cool-grey-2, .07);
+    background-color: @rgba !important;
+}
+
+

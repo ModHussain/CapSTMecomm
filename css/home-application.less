@@ -1,0 +1,59 @@
+
+
+.application-container{
+    background: @st-dark-blue;
+    color: @st-white;
+    .container{
+        height: 354px;
+        @media @mobile-break{
+            height: auto;
+        };
+        .top_space{
+            padding-top: (@v_space*10.9);
+             @media @mobile-break{
+                padding-top: (@v_space*6);
+            };
+            .application-heading{
+                width: 300px;
+                @media @mobile-break{
+                    width: 100%;
+                    margin-left: (@v_space*2.5);
+                };
+            }
+            .application-holder{
+                width: 199px;
+                @media @mobile-break{
+                    width: 50%;
+                    margin: (@v_space*1) 0
+                };
+                 .nav-link{
+                    padding:0;
+                    i{
+                        margin: 0 auto;
+                        display: block;
+                        .size(70px);
+                    }
+                }
+                .applicationtext{
+                    .st-text-size(18, 'AvantGarde');
+                    .font-lineheight(18, 21);
+                    .alphaBackground(@st-white, .5);
+                    color:@rgba;
+                    margin: (@v_space*3.8) 0 0;
+                }
+                &.borderleft{
+                    .alphaBackground(@st-white, .5);
+                    border-left: 1px solid  @rgba;
+                    @media @mobile-break{
+                        &:nth-child(even) {
+                            border-left: 0;
+                        }
+                    };
+                    
+                }
+            }
+            
+        }
+        
+    }
+}

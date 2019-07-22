@@ -1,0 +1,161 @@
+
+
+.custom-control-label{
+    margin: 0 !important;
+    &::before{
+        background: @st-white;
+        border:solid 2px @st-cool-grey-3;
+        border-radius: 50%;
+      } 
+      
+}
+  
+  .custom-radio {
+      cursor: pointer;
+    .custom-control-input:checked~.custom-control-label{
+        &::before{
+            background-color:@st-sky-blue;
+      }
+  }
+}
+
+
+/* Address Modal CSS */
+
+/* Shipping method CSS */
+.shippingInfo{
+    .heading{
+        .st-text-size(24, 'Helvetica bold');
+        color: @st-typing-blue;
+        float: left;
+        padding-top: (@v_space/2);
+        &.myorder{
+            .st-text-size(18, 'Helvetica bold');
+            color: @st-typing-blue;
+        }
+    }
+    button{
+        .st-text-size(14, 'Avantgarde Bold');
+        float: right;
+        width: 113px;
+    }
+    &.borderb{
+        .alphaBackground(@st-cool-grey-3,0.3);
+        padding-bottom: (@h_space*1.1);
+        border-bottom:1px solid @rgba;
+    }
+}
+
+.shippingAddSel2{
+    .alphaBackground(@st-cool-grey-3, .5);
+    border: solid 1px @rgba;
+    border-radius: 5px;
+    .heading{
+        .alphaBackground(@st-sky-blue1, .4);
+        background: @rgba;
+        .st-text-size(16, 'Helvetica bold');
+        color: @st-typing-blue;
+        border-bottom: solid 1px lighten(@st-cool-grey-3, 10%);
+        padding: (@v_space*1.5);
+    }
+    form{
+        margin: (@v_space*2);
+        label{
+            .st-text-size(12, 'Helvetica Roman');
+            margin: (@v_space*1) 0;
+          
+        }
+          
+        
+    }
+}
+.radioimg
+{
+    margin-top: (@v_space*2.5);
+    margin-left: (@v_space*2);
+}
+.shippingdata
+{
+    margin-left: -(@h_space*6.5);
+    @media @middesktop-break
+    {
+        margin-left: -(@h_space*4.5);
+    }
+    @media @desktop-break
+    {
+        margin-left: -(@h_space*2);
+    }
+    @media @mobile-break
+    {
+        margin-left:0;
+        margin-top: (@v_space*1.2);
+        padding: 0 (@h_space*2.2);
+    }
+}
+        .shippingdescription1
+            {
+            .st-text-size(16, 'Helvetica Bold');
+            color: @st-typing-blue;
+            margin-top: (@v_space*.5);
+            margin-bottom: (@v_space*1.7);
+            &.paymentreview1
+            {
+            .st-text-size(16, 'Helvetica Bold');
+            color: @st-typing-blue;
+            margin-top: (@v_space*2);
+            margin-left: (@v_space*1.0);
+            margin-bottom: (@v_space*.5)
+            }
+            }
+            .shippingdescription2
+            {
+            .st-text-size(14, 'Helvetica Bold');
+            color: @st-cool-grey-1;
+            margin-bottom: (@v_space/2);
+            }
+            .shippingdescription3
+            {
+            .st-text-size(14, 'Helvetica Roman');
+            color: @st-cool-grey-2;
+            margin-bottom: (@v_space*1.8);
+            &.paymentreview3
+            {
+            .st-text-size(14, 'Helvetica Bold');
+            color: @st-cool-grey-2;
+            margin-left: (@v_space*1.0);
+            margin-bottom: (@v_space*1.8);
+            }
+
+            }
+            a.shippingprice{                
+            .st-text-size(24, 'Helvetica bold');
+            color: @st-typing-blue;
+            margin-right: -(@h_space*4);
+            padding-top: (@h_space*4.5);
+                &:hover{
+                    i{
+                        svg{
+                            fill: @st-typing-blue !important;
+                        }
+                    }
+                    
+                }
+                @media @middesktop-break
+                    {
+                        margin-right: -(@h_space*2);
+                    }
+                @media @desktop-break
+                    {
+                        margin-right: 0;
+                    }
+                    @media @mobile-break
+                    {
+                        margin-right: 0;
+                        text-align: center;
+                        width: 100%;
+                        padding-top: 0px;
+                    }
+            }
+/* Shipping method CSS */
+
+

@@ -1,0 +1,152 @@
+.quotestatusblock{
+    background: @st-white;
+    height: 170px;
+    .quotesblock{
+        height: 140px;
+        .alphaBackground(@st-cool-grey-3,0.2);
+        background: @rgba;
+        padding-top:(@h_space*2);
+        padding-left: (@h_space*2.5);
+        border-bottom: 1px solid @st-cool-grey-3;
+
+            .rborder{
+                .alphaBackground(@st-cool-grey-3,0.5);
+                border-right:1px solid @rgba; 
+                margin-bottom: (@h_space*2);
+            }
+            .myquoteheading{
+                .st-text-size(11, 'Helvetica Roman');
+                color:@st-cool-grey-2;
+                padding-top: (@h_space*3);
+            }
+            .myquotedata{
+                .st-text-size(16, 'Helvetica Bold');
+                color:@st-cool-grey-1; 
+                padding-top: (@h_space*.8);
+                &.returndata{
+                    .st-text-size(13, 'Helvetica Bold');
+                    color:@st-cool-grey-1;  
+                }
+                
+            }
+            .orderstatusblock{
+                .alphaBackground(@st-sky-blue1,0.5);
+                background: @rgba;
+                margin-top: -(@v_space*2);
+                height: 140px;
+                .orderstaus{
+                    .st-text-size(12, 'Helvetica Bold');
+                    color:@st-typing-blue; 
+                    text-align: center;
+                    margin-top: (@v_space*1.8);
+                   
+                }
+    
+                .notificationstatus{
+                    display: none;
+                    .iconsection{
+                        .size(30px);
+                         margin:(@v_space*2) auto;
+                    }
+                    &.approved{
+                        display: block;
+                        .statusinfo{
+                            .statusmsg{
+                                .st-text-size(16, 'Helvetica Bold');
+                                color:@st-cool-grey-1; 
+                                text-align: center;
+                                margin-top: (@h_space*1.5);
+                                margin-left: (@h_space*1.2);
+                            }
+                            .statuslink{
+                                .st-text-size(12, 'Avantgarde Bold');
+                                color:@st-sky-blue; 
+                                text-align: center;
+                                margin-top: (@h_space*.5);
+                            }
+                        }
+                    }
+                    
+                    
+                    
+                }
+                
+            }
+           
+        
+    }
+}
+.quotecommentsection{
+    padding: 0 (@h_space*2);
+    textarea{
+        height: 72px;
+        resize: none;
+    }
+    .submit{
+        .st-text-size(14, 'Avantgarde Bold');
+        .submitbtn{
+            color:@st-white;
+            background: @st-sky-blue;
+            padding: (@h_space*1) (@h_space*2.6) (@h_space*.7);
+            &:hover{
+                color:@st-white;
+            }
+        }
+    }
+    .commenttable{
+        padding: 0px (@h_space*2);
+        table{
+            border: none;
+            margin-bottom: (@h_space*2);
+            .tableheading{
+                border-top: 2px solid @st-cool-grey-3;
+                height: 50px;
+            }
+            
+            tr{
+                th{
+                    .st-text-size(12, 'Helvetica bold');
+                    background: @st-white;
+                    text-transform: uppercase;
+                    color: @st-typing-blue;
+                    padding: (@h_space*1.5) (@h_space*2);
+                        &.widthadjust
+                        {
+                            width: 150px !important;
+                            
+                        }
+                        &.lastwidthadjust{
+                            width: 135px !important;
+                        }
+                }
+                td{
+                    .st-text-size(13, 'Helvetica roman');
+                    text-align: justify;
+                    padding: (@h_space*2.5) (@h_space*2.5) (@h_space*2.1);
+                }
+                
+               
+            }
+            tr:nth-of-type(even){
+                .alphaBackground(@st-cool-grey-3,0.05);
+                background: @rgba;
+            }
+            tr:nth-of-type(odd){
+                background: @st-white;
+            }
+            tr:last-child{
+                .alphaBackground(@st-cool-grey-3,.5);
+                border-bottom: 1px solid  @rgba;
+            }
+            @media @mobile-break
+            {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+            }
+            tbody{
+                border-top: 2px solid @st-cool-grey-3 !important;
+            }
+        }
+    }
+}

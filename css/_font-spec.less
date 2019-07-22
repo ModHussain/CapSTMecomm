@@ -1,0 +1,178 @@
+.font-size-rems(@px-size){
+	@rem-size: @px-size / @base-font-size;
+	font-size: ~"@{px-size}px"; 
+	font-size: ~"@{rem-size}rem";
+}
+.font-size-ems(@target-px-size, @context-px-size:@base-font-size) {
+	font-size: (@target-px-size / @context-px-size) * 1em;
+}
+
+// Line height global properties
+.font-lineheight(@_font-size, @_line-height) {
+    .font-size-rems(@_font-size);
+    line-height:@_line-height/@_font-size;
+}
+
+/*  Text options
+    Custom fonts can be defined by combining three variables:
+    @pixel size, @weight, @variant (font face).
+*/
+.st-ff-1(){
+    font-family:@default-font-family;
+}
+
+.st-ff-1(@px-size; @variant : ~''){
+    @rem-size: @px-size / @base-font-size;
+    font: ~"@{px-size}px" @variant, @default-font-family;
+    font-size: ~"@{rem-size}rem";
+}
+
+/*.st-ff-1(@px-size; @weight: ~'') {
+    @rem-size: @px-size / @base-font-size;
+    font: @weight ~"@{px-size}px" Arial, Helvetica, sans-serif;
+    font-size: ~"@{rem-size}rem";
+}*/
+
+/* font decoration */
+
+b, strong {
+    font-weight: bold!important;
+}
+
+.b() {
+    font-weight: bold
+}
+
+.i() {
+    font-style: italic
+}
+
+.cap() {
+    text-transform: capitalize
+}
+
+.font-bold() {
+    font-weight: @weight-bold; // bold
+}
+
+.font-medium-bold {
+    font-weight: @weight-medium-bold;
+}
+
+.font-medium() {
+    font-weight: @weight-medium; // a slightly heavier roman
+}
+
+.font-roman() {
+    font-weight: @weight-roman; // roman
+}
+
+.font-medium-light {
+    font-weight: @weight-medium-light;
+}
+
+.font-light() {
+    font-weight: @weight-light; // light
+}
+.nowrap() {white-space:nowrap}
+
+
+// Font Style "ITCAvantGarde"
+@font-face {
+    font-family: 'AvantGarde';
+    src: url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-Bk.eot?#iefix');
+    src: url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-Bk.eot?#iefix') format("eot"),
+        url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-Bk.woff2') format("woff2"),
+        url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-Bk.woff') format("woff"),
+        url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-Bk.ttf') format("truetype"),
+        url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-Bk.svg') format("svg")
+}
+@font-face {
+    font-family: 'AvantGarde Italic';
+    src: url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-BkObl.eot?#iefix');
+    src: url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-BkObl.eot?#iefix') format("eot"),
+        url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-BkObl.woff2') format("woff2"),
+        url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-BkObl.woff') format("woff"),
+        url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-BkObl.ttf') format("truetype"),
+        url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-BkObl.svg') format("svg")
+}
+@font-face {
+    font-family: 'AvantGarde bold';
+    src: url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-Demi.eot?#iefix');
+    src: url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-Demi.eot?#iefix') format("eot"),
+        url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-Demi.woff2') format("woff2"),
+        url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-Demi.woff') format("woff"),
+        url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-Demi.ttf') format("truetype"),
+        url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-Demi.svg') format("svg")
+}
+@font-face {
+    font-family: 'AvantGarde boldItalic';
+    src: url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-DemiObl.eot?#iefix');
+    src: url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-DemiObl.eot?#iefix') format("eot"),
+        url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-DemiObl.woff2') format("woff2"),
+        url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-DemiObl.woff') format("woff"),
+        url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-DemiObl.ttf') format("truetype"),
+        url('@{font-path}/ITCAvantGarde/ITCAvantGardeStd-DemiObl.svg') format("svg")
+}
+
+// Font Style "Helvetica"
+@font-face {
+    font-family: 'Helvetica Roman';
+    src: url('@{font-path}/helvetica/HelveticaNeueLTStd-Roman.eot?#iefix');
+    src: url('@{font-path}/helvetica/HelveticaNeueLTStd-Roman.eot?#iefix') format("eot"),
+        url('@{font-path}/helvetica/HelveticaNeueLTStd-Roman.woff2') format("woff2"),
+        url('@{font-path}/helvetica/HelveticaNeueLTStd-Roman.woff') format("woff"),
+        url('@{font-path}/helvetica/HelveticaNeueLTStd-Roman.ttf') format("truetype"),
+        url('@{font-path}/helvetica/HelveticaNeueLTStd-Roman.svg') format("svg")
+}
+
+@font-face {
+    font-family: 'Helvetica boldCn';
+    src: url('@{font-path}/helvetica/HelveticaNeueLTStd-MdCn.eot?#iefix');
+    src: url('@{font-path}/helvetica/HelveticaNeueLTStd-MdCn.eot?#iefix') format("eot"),
+        url('@{font-path}/helvetica/HelveticaNeueLTStd-MdCn.woff2') format("woff2"),
+        url('@{font-path}/helvetica/HelveticaNeueLTStd-MdCn.woff') format("woff"),
+        url('@{font-path}/helvetica/HelveticaNeueLTStd-MdCn.ttf') format("truetype"),
+        url('@{font-path}/helvetica/HelveticaNeueLTStd-MdCn.svg') format("svg")
+}
+
+@font-face {
+    font-family: 'Helvetica bold';
+    src: url('@{font-path}/helvetica/HelveticaNeueLTStd-Md.eot?#iefix');
+    src: url('@{font-path}/helvetica/HelveticaNeueLTStd-Md.eot?#iefix') format("eot"),
+        url('@{font-path}/helvetica/HelveticaNeueLTStd-Md.woff2') format("woff2"),
+        url('@{font-path}/helvetica/HelveticaNeueLTStd-Md.woff') format("woff"),
+        url('@{font-path}/helvetica/HelveticaNeueLTStd-Md.ttf') format("truetype"),
+        url('@{font-path}/helvetica/HelveticaNeueLTStd-Md.svg') format("svg")
+}
+
+@font-face {
+    font-family: 'Helvetica Light';
+    src: url('@{font-path}/helvetica/HelveticaNeueLTStd-LtCn.eot?#iefix');
+    src: url('@{font-path}/helvetica/HelveticaNeueLTStd-LtCn.eot?#iefix') format("eot"),
+        url('@{font-path}/helvetica/HelveticaNeueLTStd-LtCn.woff2') format("woff2"),
+        url('@{font-path}/helvetica/HelveticaNeueLTStd-LtCn.woff') format("woff"),
+        url('@{font-path}/helvetica/HelveticaNeueLTStd-LtCn.ttf') format("truetype"),
+        url('@{font-path}/helvetica/HelveticaNeueLTStd-LtCn.svg') format("svg")
+}
+
+// Font Style "Lubalin"
+@font-face {
+    font-family: 'ITC Lubalin Light';
+    src: url('@{font-path}/lubalin/LubalinGraphStd-Book.eot?#iefix');
+    src: url('@{font-path}/lubalin/LubalinGraphStd-Book.eot?#iefix') format("eot"),
+        url('@{font-path}/lubalin/LubalinGraphStd-Book.woff2') format("woff2"),
+        url('@{font-path}/lubalin/LubalinGraphStd-Book.woff') format("woff"),
+        url('@{font-path}/lubalin/LubalinGraphStd-Book.ttf') format("truetype"),
+        url('@{font-path}/lubalin/LubalinGraphStd-Book.svg') format("svg")
+}
+
+@font-face {
+    font-family: 'ITC Lubalin bold';
+    src: url('@{font-path}/lubalin/LubalinGraphStd-Demi.eot?#iefix');
+    src: url('@{font-path}/lubalin/LubalinGraphStd-Demi.eot?#iefix') format("eot"),
+        url('@{font-path}/lubalin/LubalinGraphStd-Demi.woff2') format("woff2"),
+        url('@{font-path}/lubalin/LubalinGraphStd-Demi.woff') format("woff"),
+        url('@{font-path}/lubalin/LubalinGraphStd-Demi.ttf') format("truetype"),
+        url('@{font-path}/lubalin/LubalinGraphStd-Demi.svg') format("svg")
+}

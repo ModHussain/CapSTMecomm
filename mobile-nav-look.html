@@ -1,0 +1,254 @@
+<div class="menu-trigger">
+  <nav>
+    <button class="menu-open"><span><i class="fa fa-bars fa-fw"></i></span>
+    </button>
+  </nav>
+</div>
+
+<div class="menu">
+  <span class="menu-close"><i class="fa fa-close fa-fw"></i></span>
+  <!--<ul>
+    <li><a href="#">styles</a></li>
+    <li><a href="#">components</a></li>
+    <li><a href="#">content modules</a></li>
+    <li><a href="#">templates</a></li>
+  </ul>-->
+  <div class="accordian-wrapper">
+  <dl class="accordion-js">
+    <dt class="accordion-element__term">Styles</dt>
+    <div>
+      <dd>
+        <a href="#">Style 1</a>
+        <a href="#">Style 2</a>
+        <!--<dl class="accordion-js">
+        	 <dt>Subprojects</dt>
+          	<div>
+            	<dd>
+                <a href="#">Subproject 1</a>
+                <a href="#">Subproject 3</a>
+                <a href="#">Subproject 4</a>
+                <a href="#">Subproject 5</a>
+              </dd>
+          </div>
+        </dl>-->
+        <a href="#">style 3</a>
+        <a href="#">style 4</a>
+        <a href="#">style 5</a>
+      </dd>
+    </div>
+    <dt class="accordion-element__term">Components</dt>
+    <div>
+      <dd>
+        <a href="#">C 1</a>
+        <a href="#">C 2</a>
+        <a href="#">C 3</a>
+        <a href="#">C 4</a>
+        <a href="#">C 5</a>
+      </dd>
+    </div>
+    <dt class="accordion-element__term">Modules</dt>
+    <div>
+      <dd>
+        <a href="#">M 1</a>
+        <a href="#">M 2</a>
+        <a href="#">M 3</a>
+        <a href="#">M 4</a>
+        <a href="#">M 5</a>
+      </dd>
+    </div>
+    <dt class="accordion-element__term">Templates</dt>
+    <div>
+      <dd>
+        <a href="#">T 1</a>
+        <a href="#">T 2</a>
+        <a href="#">T 3</a>
+        <a href="#">T 4</a>
+        <a href="#">T 5</a>
+      </dd>
+    </div>
+  </dl>
+</div>
+</div>
+
+
+
+/////////// Style
+<style>
+html, body {
+  font-family: 'PT Sans', sans-serif;
+}
+
+.menu-trigger {
+  padding: 50px;
+}
+
+.menu {
+  background-color: #232021;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 500px;
+  right: 100vw;
+  color: #fff;
+  z-index: 3000;
+  transform: translateX(0);
+  transition: all 300ms cubic-bezier(.165,.84,.44,1);
+  will-change: transform;
+  overflow-y:auto;
+}
+
+.menu.active {
+  transition: all 300ms cubic-bezier(.165,.84,.44,1);
+  transform: translateX(500px);
+}
+
+.menu .menu-close {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+}
+
+
+nav {
+  display: flex;
+}
+
+nav button {
+  margin: 0;
+  padding: 15px 25px;
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,1);
+  border-right: none;
+  background-color: transparent;
+  position: relative;
+  
+}
+
+nav button:last-child {
+  border-right: 1px solid rgba(0,0,0,1);
+}
+
+nav button:hover {
+  color: #fff;
+}
+
+nav button:focus {
+  outline: 0;
+}
+
+nav button:before {
+  top: 25%;
+  bottom: 25%;
+  left: 25%;
+  right: 25%;
+  position: absolute;
+  content: '';
+  background: #000;
+  visibility: hidden;
+  transition-duration: 0s;
+}
+
+nav button:hover:before {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 130ms cubic-bezier(.165,.84,.44,1);
+  visibility: visible;
+}
+
+nav button span {
+  position: relative;
+}
+
+
+/*accordian*/
+.accordian-wrapper {
+  overflow-y: auto;
+  padding:50px 0 0 0;
+}
+
+dt, dd a {
+  display: block;
+  padding: 15px 0 15px 22px;
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+dt {
+  cursor: pointer;
+  outline: none;
+}
+
+dl {
+  margin: 0;
+}
+
+dd a {
+    text-decoration: none;
+  }
+
+
+.accordion-element__term { 
+  font-weight: bold; 
+}
+.accordion-element__term.active, .accordion-element__term:hover, .accordion-element__term:focus {
+      background-color: #333;
+    }
+    
+</style>
+
+///////// Javascript
+<script>
+var menuElement = document.querySelector('.menu');
+function showMenu() {
+  menuElement.classList.add('active');
+}
+function hideMenu() {
+  menuElement.classList.remove('active');
+}
+
+
+var menuOpener = document.querySelector('.menu-open');
+var menuCloser = document.querySelector('.menu-close');
+menuOpener.addEventListener('click', showMenu);
+menuCloser.addEventListener('click', hideMenu);
+
+//accordian 
+
+(function($) {
+  'use strict';
+
+  var  $accordion = $('.accordion-js');
+  $accordion.find('div').css({ display : 'none', overflow : 'hidden'});
+  
+  $accordion.children('dt').click(function() {
+    var $this = $(this);
+    var $targetContainer =  $this.next('div');
+    var $targetDescription =  $targetContainer.find('dd').first();
+    $('.accordion-element__term').removeClass('active');
+    $this.toggleClass('active');
+    
+    if(!$targetDescription.hasClass('active')) {
+      $targetContainer.css('display', 'block');
+      $targetDescription.css('margin-top', -$targetDescription.height());
+      $targetDescription.velocity({ marginTop: 0}, { duration: 350 });
+      $targetDescription.addClass('active');
+    } 
+    else {
+      $targetDescription.velocity({ marginTop: -$targetDescription.height()}, { duration: 350 });
+      $targetDescription.removeClass('active');
+    }
+    return false;
+  });
+})( jQuery );
+</script>
+
+//////// load additional files
+
+https://use.fontawesome.com/857a1a19b0.js
+//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js
+https://cdn.jsdelivr.net/velocity/1.1.0/velocity.min.js

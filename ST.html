@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]> <html dir="ltr" lang="en" class="no-js iem7"> <![endif]-->
+<!--[if lt IE 7 ]> <html dir="ltr" lang="en" class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7 ]>    <html dir="ltr" lang="en" class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8 ]>    <html dir="ltr" lang="en" class="no-js ie8 oldie"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
+<html dir="ltr" lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>STMicroelectronics - Innovative semiconductor solutions for Smart Driving and IoT (Internet of Things). </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--font awesome cdn-->
+
+    <link rel="icon" href="/_STincludes/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/_STincludes/images/favicon.ico">
+
+    <link rel="stylesheet/less" type="text/css" href="./css/style.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container-fulid">
+        <div class="header-strip" id="header-strip"></div>
+        <div class="header" id="header"></div>
+        <div class="nav_bar" id="navigation-container"></div>
+        <div class="home-container" id="home-container"></div>
+        <div class="recentyViewed" id="recent-container"></div>
+        <div class="promotion" id="promotion"></div>
+        <div class="footer" id="footer-container"></div>
+
+    </div>
+    <script src="./vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="./vendor/jquery/jquery.mobile-1.4.5.min.js"></script>
+    <script src="./vendor/jquery/mobile-detect.min.js"></script>
+    <script src="./vendor/megamenu/js/popper.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./vendor/modernizr/modernizr-custom.js"></script>
+    <script src="./vendor/owlcarousel/js/owl.carousel.min.js"></script>
+    <script src="./vendor/megamenu/js/bootsnav.js"></script>
+    <script src="./vendor/megamenu/js/modern-megamenu.js"></script>
+    <script src="./vendor/screen/screen.js"></script>
+    <script>
+        $(function() {
+            $.get("./components/notify-modal.html", function(data) {
+                $("body").prepend(data);
+            });
+            $.get("./components/stusermodal.html", function(data) {
+                $("body").prepend(data);
+            });
+            $("#header-strip").load("./components/header-strip.html");
+            $("#header").load("./components/header.html", function() {
+                $(".login").hide();
+            });
+            $("#navigation-container").load("./components/nav.html");
+            $("#home-container").load("./components/home-container.html", function() {
+                $("#dealBanner").load("./components/deal.html");
+                $("#heroBanner").load("./components/heroBanner.html", function() {
+                    $("#heroBanner .holder").addClass("hide");
+                    $("#fullBanner").removeClass("hide");
+                    $("#guestpromotion").addClass("hide");
+                    $("#b2bpromotion").addClass("hide");
+                    $("#b2cpromotion").removeClass("hide"); 
+                });
+            });
+            //$("#application-container").load("./components/application-container.html"); 
+            $("#recent-container").load("./components/recent-container.html");
+            $("#promotion").load("./components/promotion.html", function() {
+                $("#promotion-banner").hide();
+            });
+            // $("#footer-container").load("./components/footer-container.html"); 
+            $("#footer-container").load("./components/footer-container.html");
+
+        });
+        setTimeout(
+            function(){
+                jQuery('#stuserModal').modal(
+                    {
+                        backdrop: 'static',   // This disable for click outside event
+                        keyboard: true        // This for keyboard event
+                    }
+             );
+                
+            }
+        ,1000) 
+           
+          </script>
+    <script src="./js/st-custom.js"></script>
+</body>
+
+</html>

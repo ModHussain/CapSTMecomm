@@ -1,0 +1,100 @@
+.orderregulationsection
+{
+    .orderregulationblock
+    {
+        sup{
+            color: @st-red !important;
+            font-size: 20px !important;
+            top: 0;
+        }  
+        textarea{
+            .size(457px,74px);
+            resize: none;
+        }  
+        .regulationform{
+            .alphaBackground(@st-cool-grey-3,.4);
+            border-bottom: 1px solid @rgba;
+            .custom-control-label:before{
+                .alphaBackground(@st-cool-grey-3,0.2);
+                background-color:@rgba;
+              } 
+              
+              .custom-radio .custom-control-input:checked~.custom-control-label{
+                &::before{
+                    background-color:@st-sky-blue;
+              }
+            }
+            .custom-control{
+                
+                label.custom-control-label{
+                    
+                    &::before{
+                       
+                        background: @st-white;
+                        border: solid 1px @st-cool-grey-2;
+                    }
+                }
+            }
+        }
+        
+        
+    }
+    }
+    .agreeblock
+        {
+            margin:0 (@h_space*2);
+            .custom-control-label:before{
+                .alphaBackground(@st-cool-grey-3,0.2);
+                background-color:@rgba;
+              } 
+              
+              .custom-checkbox .custom-control-input:checked~.custom-control-label{
+                &::before{
+                    background-color:@st-sky-blue;
+              }
+            }
+            .custom-control{
+                
+                label.custom-control-label{
+                    .st-text-size(12, 'Helvetica Roman');
+                    color:@st-cool-grey-1;
+                    &::before{
+                       
+                        background: @st-white;
+                        border: solid 1px @st-cool-grey-2;
+                    }
+                }
+            }
+        }
+        .termsection{
+            margin: (@h_space*2);
+            .termsheading{
+                .st-text-size(13, 'Helvetica bold');
+                color:@st-cool-grey-1;
+                a.bluetext
+                {
+                    color:@st-sky-blue;
+                    &:hover{
+                    color:@st-typing-blue;
+                    }
+                    &:active,&:focus,&:visited{
+                    color:@st-sky-blue;
+                    }
+                }
+            }
+            .terminfo
+            {
+                .st-text-size(13, 'Helvetica bold');
+                color:@st-cool-grey-2;
+                text-align: justify;
+            }
+            
+        }
+    select.inputState{
+        -moz-appearance: none;
+         -webkit-appearance: none;
+         appearance: none;
+      }
+      select.inputState ::-ms-expand {
+        display:none;
+       }
